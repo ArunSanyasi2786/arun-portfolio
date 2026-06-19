@@ -2,6 +2,14 @@
 
 Premium engineering portfolio website for **Arun Sanyasi**, an Instrumentation and Control Engineering graduate focused on PLC, SCADA, DCS concepts, industrial automation, control systems, instrumentation, sensors, HMI, Raspberry Pi, ESP32, industrial communication and project development.
 
+## Live Website
+
+Visit the deployed portfolio:
+
+```text
+https://arunsanyasi2786.github.io/arun-portfolio/
+```
+
 ## Features
 
 - React + Vite frontend
@@ -23,36 +31,36 @@ Premium engineering portfolio website for **Arun Sanyasi**, an Instrumentation a
 
 ```text
 arun-portfolio/
-├── frontend/
-│   ├── public/
-│   │   └── files/
-│   ├── src/
-│   │   ├── assets/
-│   │   │   ├── profile/
-│   │   │   ├── projects/
-│   │   │   └── review-needed/
-│   │   ├── components/
-│   │   ├── sections/
-│   │   ├── data/
-│   │   ├── hooks/
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   ├── package.json
-│   └── vite.config.js
-├── backend/
-│   ├── knowledge/
-│   │   └── arun-profile.json
-│   ├── routes/
-│   ├── server.js
-│   ├── package.json
-│   └── .env.example
-├── scripts/
-│   ├── extract-assets.py
-│   └── scan-profile-data.py
-├── ASSET_MANIFEST.md
-├── README.md
-├── .gitignore
-└── package.json
+|-- frontend/
+|   |-- public/
+|   |   `-- files/
+|   |-- src/
+|   |   |-- assets/
+|   |   |   |-- profile/
+|   |   |   |-- projects/
+|   |   |   `-- review-needed/
+|   |   |-- components/
+|   |   |-- sections/
+|   |   |-- data/
+|   |   |-- hooks/
+|   |   |-- App.jsx
+|   |   `-- main.jsx
+|   |-- package.json
+|   `-- vite.config.js
+|-- backend/
+|   |-- knowledge/
+|   |   `-- arun-profile.json
+|   |-- routes/
+|   |-- server.js
+|   |-- package.json
+|   `-- .env.example
+|-- scripts/
+|   |-- extract-assets.py
+|   `-- scan-profile-data.py
+|-- ASSET_MANIFEST.md
+|-- README.md
+|-- .gitignore
+`-- package.json
 ```
 
 ## Run Locally
@@ -143,7 +151,7 @@ Steps:
 
 1. Push this repo to GitHub as `arun-portfolio`.
 2. In GitHub, go to **Settings > Pages**.
-3. Set **Source** to **GitHub Actions**.
+3. Set **Source** to **GitHub Actions** if it is not already enabled.
 4. Push to `main`. The workflow builds `frontend` and deploys it.
 
 The Vite base path defaults to:
