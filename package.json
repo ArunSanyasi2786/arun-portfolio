@@ -1,0 +1,21 @@
+{
+  "name": "arun-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Premium engineering portfolio website for Arun Sanyasi.",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace backend\" \"npm run dev --workspace frontend\"",
+    "build": "npm run build --workspace frontend",
+    "preview": "npm run preview --workspace frontend",
+    "start": "npm run start --workspace backend",
+    "extract:assets": "python scripts/extract-assets.py",
+    "scan:profile": "python scripts/scan-profile-data.py"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --electric: #22d3ee;
+  --cobalt: #2563eb;
+  --neon: #67e8f9;
+  --panel: rgba(7, 20, 38, 0.72);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #030814;
+  font-family: 'IBM Plex Sans', ui-sans-serif, sans-serif;
+}
+
+button,
+a,
+input,
+textarea {
+  outline-offset: 4px;
+}
+
+.glass-card {
+  border: 1px solid rgba(103, 232, 249, 0.18);
+  background: linear-gradient(135deg, rgba(8, 20, 38, 0.78), rgba(5, 12, 25, 0.56));
+  box-shadow: 0 24px 80px rgba(2, 8, 23, 0.44), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+}
+
+.neon-border {
+  position: relative;
+}
+
+.neon-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.8), rgba(37, 99, 235, 0.18), rgba(103, 232, 249, 0.35));
+  filter: blur(10px);
+  opacity: 0.55;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #ffffff 0%, #67e8f9 42%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.conic-halo {
+  background: conic-gradient(from 180deg, transparent, #22d3ee, #60a5fa, transparent, #67e8f9, transparent);
+  animation: spin-slow 8s linear infinite;
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.scanline {
+  background: linear-gradient(180deg, transparent 0%, rgba(103, 232, 249, 0.18) 48%, transparent 100%);
+  animation: scan 4.6s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0%, 100% { transform: translateY(-120%); opacity: 0; }
+  35%, 65% { opacity: 0.9; }
+  50% { transform: translateY(120%); }
+}
+
+.tilt-card {
+  transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(var(--ty, 0px));
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.tilt-card:hover {
+  --ty: -8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
