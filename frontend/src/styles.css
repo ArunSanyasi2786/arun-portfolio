@@ -64,10 +64,24 @@ textarea {
   animation: spin-slow 8s linear infinite;
 }
 
+.orbit-track {
+  box-shadow: 0 0 50px rgba(34, 211, 238, 0.12), inset 0 0 45px rgba(37, 99, 235, 0.12);
+  animation: orbit-pulse 5s ease-in-out infinite;
+}
+
+.orbit-chip {
+  box-shadow: 0 0 24px rgba(34, 211, 238, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
 @keyframes spin-slow {
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes orbit-pulse {
+  0%, 100% { opacity: 0.45; transform: scale(0.985); }
+  50% { opacity: 0.95; transform: scale(1.015); }
 }
 
 .scanline {

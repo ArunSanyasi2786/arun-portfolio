@@ -21,8 +21,16 @@ function skillText() {
 function localAnswer(question = '') {
   const q = question.toLowerCase();
 
+  if (q.includes('weakness') || q.includes('negative') || q.includes('bad thing') || q.includes('bad about')) {
+    return knowledge.weaknessStatement;
+  }
+
+  if (q.includes('behaviour') || q.includes('behavior') || q.includes('personality') || q.includes('good thing') || q.includes('strength')) {
+    return knowledge.positiveProfile;
+  }
+
   if (q.includes('cv') || q.includes('resume') || q.includes('download')) {
-    return 'Use the Download Portfolio PDF button on the website. Add the PDF at frontend/public/files/arun-portfolio.pdf and the button will enable automatically.';
+    return 'Use the CV / Resume / Portfolio section. The Download CV button opens Arun\'s uploaded resume PDF, and the same section also has portfolio, project report, experience letter and recommendation placeholder downloads.';
   }
 
   if (q.includes('education') || q.includes('college') || q.includes('graduate')) {
@@ -38,8 +46,12 @@ function localAnswer(question = '') {
     return 'Arun has PLC exposure with Siemens SICAM A8000, Siemens S7-1200 concepts, ladder logic, interlocks, auto/manual control, PID-based water-level control concepts, CODESYS, Factory I/O and PLC simulator training.';
   }
 
-  if (q.includes('sensor') || q.includes('esp32') || q.includes('raspberry') || q.includes('max30102')) {
-    return 'Arun has worked with ESP32, Raspberry Pi, MAX30102 SpO2/pulse sensing, temperature sensors, biomedical sensors, serial communication and PyQt6 kiosk UI development through the Basic Health Monitoring Station.';
+  if (q.includes('course') || q.includes('module') || q.includes('learned')) {
+    return `Arun's course/module strengths include:\n${bullet(knowledge.courses)}`;
+  }
+
+  if (q.includes('sensor') || q.includes('max30102') || q.includes('biomedical')) {
+    return 'Arun has worked with biomedical and industrial sensing through the Basic Health Monitoring Station and instrumentation coursework: pulse/SpO2 sensing, temperature sensing, height/weight measurement, sensor validation, PyQt6 interface workflow, SQLite storage and QR report generation.';
   }
 
   if (q.includes('final') || q.includes('health') || q.includes('project')) {
@@ -63,7 +75,7 @@ function localAnswer(question = '') {
     return `Arun's skills include:\n${skillText()}`;
   }
 
-  return `${knowledge.name} is an Instrumentation and Control Engineering graduate focused on PLC, SCADA, DCS concepts, industrial automation, electrical control systems, instrumentation, sensors, ESP32, Raspberry Pi and project development. Ask about his projects, SCADA, PLC, sensors, education or experience.`;
+  return `${knowledge.name} is an Instrumentation and Control Engineering graduate focused on PLC, SCADA, DCS concepts, industrial automation, electrical control systems, instrumentation, switchgear/protection, industrial networking, sensors and project development. Ask about his projects, courses, SCADA, PLC, sensors, education or experience.`;
 }
 
 function compactProfile() {
@@ -76,6 +88,9 @@ function compactProfile() {
     skills: knowledge.skills,
     projects: knowledge.projects,
     certifications: knowledge.certifications,
+    courses: knowledge.courses,
+    weaknessStatement: knowledge.weaknessStatement,
+    positiveProfile: knowledge.positiveProfile,
     academicContributions: knowledge.academicContributions
   });
 }
@@ -94,7 +109,7 @@ async function aiAnswer(question) {
       input: [
         {
           role: 'system',
-          content: 'You are ArunBot, a concise portfolio assistant. Answer only using the provided Arun profile knowledge. Do not invent contact details, jobs, marks, publications or experience.'
+          content: 'You are ArunBot, a concise portfolio assistant. Answer only using the provided Arun profile knowledge. Do not invent contact details, jobs, marks, publications or experience. If asked about weaknesses or negative traits, answer constructively using the provided weaknessStatement and do not insult Arun.'
         },
         {
           role: 'user',

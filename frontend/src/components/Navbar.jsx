@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 const links = [
   ['Home', '#home'],
   ['About', '#about'],
+  ['Courses', '#courses'],
   ['Skills', '#skills'],
   ['Projects', '#projects'],
   ['Experience', '#experience'],

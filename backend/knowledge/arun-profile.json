@@ -1,130 +1,76 @@
 {
   "name": "Arun Sanyasi",
   "title": "Instrumentation and Control Engineer",
-  "tagline": "PLC | SCADA | DCS | Industrial Automation | Control Systems",
+  "tagline": "PLC | SCADA | DCS | Electrical Control Systems | Industrial Automation",
   "location": "Samdrup Jongkhar, Bhutan",
   "email": "sanyasiarun220@gmail.com",
   "phone": "+975 77694520",
   "github": "https://github.com/ArunSanyasi2786",
   "linkedin": "Add LinkedIn URL",
+  "summary": "Instrumentation and Control Engineering graduate from College of Science and Technology with hands-on exposure to PLC/SCADA commissioning, industrial electrical maintenance, switchyard systems, MCCs, motor-control wiring, capacitor banks, sensors, industrial networking, digitization workflows and project development.",
+  "weaknessStatement": "One weakness I am working on is that sometimes I focus too much on technical details, especially when checking PLC logic, wiring, or sensor readings. I want everything to be accurate, so I may spend extra time verifying small details. However, I am improving this by planning my work better, setting priorities, and asking for feedback when needed. This helps me maintain accuracy while also completing tasks on time.",
+  "positiveProfile": "Arun shows strong curiosity, persistence and care for engineering accuracy. He keeps improving through notes, project work, feedback and hands-on practice. He is especially suited to roles where troubleshooting, documentation, safety awareness and willingness to learn matter.",
   "education": [
-    {
-      "degree": "B.E. in Instrumentation and Control Engineering",
-      "institution": "College of Science and Technology, Royal University of Bhutan",
-      "location": "Phuentsholing, Bhutan",
-      "period": "2022 - 2026",
-      "note": "68.21% till 7th semester"
-    },
-    {
-      "degree": "Higher Secondary Education, Class XII",
-      "institution": "Karmaling Higher Secondary School",
-      "period": "2020 - 2021",
-      "note": "70.2%"
-    },
-    {
-      "degree": "Secondary Education, Class X",
-      "institution": "BCSE",
-      "period": "2019",
-      "note": "78.14%"
-    }
+    { "degree": "B.E. in Instrumentation and Control Engineering", "institution": "College of Science and Technology, Royal University of Bhutan", "location": "Phuentsholing, Bhutan", "period": "2022 - 2026", "note": "68.21% till 7th semester" },
+    { "degree": "Higher Secondary Education, Class XII", "institution": "Karmaling Higher Secondary School", "period": "2020 - 2021", "note": "70.2%" },
+    { "degree": "Secondary Education, Class X", "institution": "BCSE", "period": "2019", "note": "78.14%" }
   ],
-  "summary": "Instrumentation and Control Engineering graduate from College of Science and Technology with hands-on exposure to PLC/SCADA commissioning, industrial electrical maintenance, switchyard systems, MCCs, motor-control wiring, sensors, embedded systems, and project development. Arun is focused on solving real industrial problems using automation, control systems, instrumentation, and safe electrical operation practices.",
   "experience": [
     {
       "role": "Graduate Engineer Trainee - Automation and Commissioning",
       "organization": "Bhutan Automation and Engineering Limited, Dagachhu Hydropower Plant",
       "period": "83 days",
-      "focus": "Desilter and dam control works",
-      "points": [
-        "Developed ladder-logic control for inlet, outlet and flushing gate systems on Siemens SICAM A8000.",
-        "Applied interlocks, alarms, auto/manual modes and PID-based water-level control concepts.",
-        "Built SCALA 250 SCADA/HMI screens for equipment status, alarms and gate visualization.",
-        "Performed point-to-point I/O verification, loop checks and field-wiring validation using EPLAN Electric P8 drawings."
-      ]
+      "focus": "Hydropower automation, desilter and dam control works",
+      "points": ["Developed ladder-logic control for inlet, outlet and flushing gate systems on Siemens SICAM A8000.", "Built SCALA 250 SCADA/HMI screens for equipment status, alarms and gate visualization.", "Performed point-to-point I/O verification, loop checks and field-wiring validation using EPLAN Electric P8 drawings."]
     },
     {
       "role": "Instrumentation and Electrical Automation Intern",
       "organization": "Druk Wang Alloys Limited (DWAL)",
       "period": "Dec 2024 - Jan 2025",
-      "focus": "Ferro alloy plant, switchyard and heavy-industry systems",
-      "points": [
-        "Traced field signals from sensors and instruments to panels across MCCs and 33kV/11kV electrical systems.",
-        "Observed switchyard operations, switchgear, protection relay practices, capacitor banks and capacitor discharge safety.",
-        "Reviewed motor-control wiring, preventive maintenance practices and CMMS-style maintenance records."
-      ]
+      "focus": "Ferro-alloy plant, switchyard, MCC, motor-control wiring, capacitor bank and protection exposure",
+      "points": ["Traced field signals from sensors and instruments to panels across MCCs and 33kV/11kV electrical systems.", "Observed switchyard operations, switchgear, protection relay practices, capacitor banks and capacitor discharge safety.", "Reviewed motor-control wiring, preventive maintenance practices and CMMS-style maintenance records."]
     },
     {
       "role": "Automation and Digitization App Intern",
       "organization": "Fuzzy Automation",
       "period": "Jul 2025",
-      "focus": "Handwritten bills and receipts digitization app",
-      "points": [
-        "Supported an app for detecting handwritten bills and receipts and storing records in digital format.",
-        "Contributed to capture-to-storage workflow testing, detection review and structured digital archiving.",
-        "Worked on device configuration, networking basics and troubleshooting during workflow testing."
-      ]
+      "focus": "Handwritten bills and receipts digitization app, networking and troubleshooting",
+      "points": ["Supported an app for detecting handwritten bills and receipts and storing records in digital format.", "Contributed to capture-to-storage workflow testing, detection review and structured digital archiving.", "Worked on device configuration, networking basics and troubleshooting during workflow testing."]
     }
   ],
   "skills": {
     "automation": ["PLC Programming", "Siemens TIA Portal", "Siemens SICAM A8000", "SCADA Systems", "SCALA 250", "WinCC", "DCS Concepts", "HMI Design", "CODESYS", "Factory I/O"],
-    "instrumentation": ["Sensors and Transducers", "Loop Checks", "I/O Verification", "MAX30102 Sensor", "Temperature Sensors", "Pulse Sensors", "Biomedical Sensors", "Field Signal Tracing"],
-    "electrical": ["Motor Control", "MCCs", "Switchyard Exposure", "33kV/11kV Systems", "Capacitor Banks", "VFD Control Wiring", "Electrical Testing", "SLD Interpretation"],
-    "embedded": ["ESP32", "Raspberry Pi", "Arduino IDE", "Embedded Sensor Interfacing", "Serial Communication", "Modbus RTU/TCP", "PROFINET", "PROFIBUS"],
-    "software": ["Python", "PyQt6 Basics", "AutoCAD Electrical Basics", "EPLAN Electric P8", "Proteus", "Fusion 360", "SolidWorks", "MS Office"]
+    "instrumentation": ["Sensors and Transducers", "Loop Checks", "I/O Verification", "Biomedical Sensors", "Temperature Sensors", "Pulse and SpO2 Sensing", "Field Signal Tracing"],
+    "electrical": ["Motor Control", "MCCs", "Switchyard Exposure", "33kV/11kV Systems", "Capacitor Banks", "VFD Control Wiring", "Electrical Testing", "Switchgear and Protection", "SLD Interpretation"],
+    "networking": ["Industrial Networking", "Modbus RTU/TCP", "PROFINET", "PROFIBUS", "IP Configuration", "Troubleshooting"],
+    "software": ["Python", "PyQt6 Basics", "SQLite", "QR Reports", "AutoCAD Electrical Basics", "EPLAN Electric P8", "Proteus", "MS Office"],
+    "softSkills": ["Troubleshooting discipline", "Technical reporting", "Team communication", "Safety awareness", "Learning agility", "Attention to detail"]
   },
+  "courses": [
+    "CAS - Process Control",
+    "Industrial Automation and PLC Systems",
+    "Industrial Drives",
+    "Industrial Networking",
+    "Switchgear and Protection",
+    "Biomedical Instrumentation",
+    "Hydraulics and Pneumatics",
+    "Sensor Network",
+    "Wireless Sensor Technology",
+    "Industrial Sensor Network",
+    "Electrical Machines",
+    "Distributed Control System"
+  ],
   "projects": [
-    {
-      "title": "Basic Health Monitoring Station",
-      "description": "Final-year biomedical kiosk for measuring BMI, pulse rate, SpO2, respiratory rate, body temperature, height and weight with real-time reporting and QR-code based handoff.",
-      "technologies": ["Raspberry Pi", "ESP32", "PyQt6", "MAX30102", "Temperature Sensors", "QR Reports", "SQLite"]
-    },
-    {
-      "title": "PLC Based Dam Water Level Indicator and Control System",
-      "description": "Water-level monitoring and control logic for safer dam level management using PLC concepts, interlocks and level-control sequencing.",
-      "technologies": ["PLC", "Ladder Logic", "SCADA", "HMI", "PID Concepts"]
-    },
-    {
-      "title": "Siemens SICAM A8000 Industrial Steam Boiler Monitoring",
-      "description": "PLC/SCADA monitoring solution using SICAM Workbench and SCALA 250 visualization for temperature, pressure and level-control loops.",
-      "technologies": ["SICAM A8000", "SCALA 250", "SCADA", "Loop Checks", "EPLAN"]
-    },
-    {
-      "title": "Factory I/O and CODESYS Manufacturing Line",
-      "description": "Simulated production workflow with conveyor sorting, filling, capping, storage and HMI logic for an automated manufacturing line.",
-      "technologies": ["CODESYS", "Factory I/O", "Conveyors", "HMI", "Structured Text"]
-    },
-    {
-      "title": "Smart Vehicle Accident Detector for Bhutanese Road Systems",
-      "description": "Accident detection and alerting concept designed for Bhutanese road conditions with embedded sensing and emergency-response thinking.",
-      "technologies": ["Embedded Systems", "Sensors", "Road Safety", "Alerting Logic"]
-    },
-    {
-      "title": "Electrical Analysis Case Studies",
-      "description": "Case studies on solar microgrid with load management, AI-driven battery management systems for EVs and solid-state transformers for grid modernization.",
-      "technologies": ["Power Systems", "BMS", "Solar Microgrid", "SST", "Load Management"]
-    }
+    { "title": "Basic Health Monitoring Station", "description": "Final-year biomedical kiosk for measuring BMI, pulse rate, SpO2, respiratory rate, body temperature, height and weight with real-time reporting and QR-code based handoff.", "technologies": ["Biomedical Sensors", "PyQt6", "MAX30102", "Temperature Sensors", "QR Reports", "SQLite"] },
+    { "title": "PLC Based Dam Water Level Indicator and Control System", "description": "Water-level monitoring and control logic for safer dam level management using PLC concepts, interlocks and level-control sequencing.", "technologies": ["PLC", "Ladder Logic", "SCADA", "HMI", "PID Concepts"] },
+    { "title": "SICAM A8000 Boiler Monitoring and SCADA Screens", "description": "PLC/SCADA monitoring concept using SICAM Workbench and SCALA 250 for temperature, pressure and level-control loops.", "technologies": ["SICAM A8000", "SCALA 250", "SCADA", "Loop Checks", "EPLAN"] },
+    { "title": "Material Handling and Conveyor Automation", "description": "PLC and HMI practice around material handling, conveyor sequencing, sorting, filling, capping, storage and operator display logic.", "technologies": ["CODESYS", "Factory I/O", "Conveyors", "HMI"] },
+    { "title": "Smart Vehicle Accident Detector for Bhutanese Road Systems", "description": "Accident detection and alerting concept designed for Bhutanese road conditions with embedded sensing and emergency-response thinking.", "technologies": ["Embedded Sensing", "Sensors", "Road Safety", "Alerting Logic"] },
+    { "title": "Handwritten Bills and Receipt Digitization App", "description": "Application workflow for detecting handwritten bills and receipts, reviewing captured information and storing records in digital format.", "technologies": ["OCR Workflow", "Digital Records", "Networking", "Troubleshooting"] },
+    { "title": "Electrical Analysis Case Studies", "description": "Case studies on solar microgrid with load management, AI-driven battery management systems for EVs and solid-state transformers for grid modernization.", "technologies": ["Power Systems", "Solar Microgrid", "BMS", "SST", "Load Management"] }
   ],
-  "certifications": [
-    "Electrical Testing Equipment Techniques",
-    "VFD Control Wiring Diagram Techniques - 179 lessons",
-    "PLC Simulator Factory",
-    "Oil and Gas Industry Fundamentals",
-    "Robotic Process Automation for Developers",
-    "Selenium with Python from Scratch",
-    "AI Industry Analysis",
-    "Business Entrepreneurship"
-  ],
-  "academicContributions": [
-    "IEEE publication: Design and Development of a Basic Health Monitoring Station.",
-    "Participated in Student Research Meet organised by Royal University of Bhutan (RUB).",
-    "Final Year Major Project work covering hardware design, embedded firmware, sensor calibration, GUI workflow, data handling and QR report generation."
-  ],
-  "chatSuggestedPrompts": [
-    "Tell me about Arun's final year project.",
-    "What PLC and SCADA skills does Arun have?",
-    "What sensors has Arun worked with?",
-    "Is Arun suitable for industrial automation roles?",
-    "What is Arun's education background?",
-    "Download Arun's CV"
-  ]
+  "certifications": ["Electrical Testing Equipment Techniques", "VFD Control Wiring Diagram Techniques - 179 lessons", "PLC Simulator Factory", "Oil and Gas Industry Fundamentals", "Robotic Process Automation for Developers", "Selenium with Python from Scratch", "AI Industry Analysis", "Business Entrepreneurship"],
+  "documents": ["Download CV", "Download Portfolio PDF", "Project Portfolio / Report", "Experience / Letter PDF", "Recommendation Placeholder"],
+  "academicContributions": ["IEEE publication: Design and Development of a Basic Health Monitoring Station.", "Participated in Student Research Meet organised by Royal University of Bhutan (RUB).", "Final Year Major Project work covering hardware design, sensor calibration, GUI workflow, data handling and QR report generation."],
+  "chatSuggestedPrompts": ["Tell me about Arun's final year project.", "What PLC and SCADA skills does Arun have?", "What courses has Arun learned?", "What are Arun's soft skills?", "What is Arun's weakness?", "Download Arun's CV"]
 }

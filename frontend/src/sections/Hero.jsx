@@ -8,6 +8,8 @@ import { hero, stats } from '../data/portfolio.js';
 const ThreeHeroCanvas = lazy(() => import('../components/ThreeHeroCanvas.jsx'));
 
 export default function Hero() {
+  const cvUrl = `${import.meta.env.BASE_URL}files/arun-cv.pdf`;
+
   return (
     <section id="home" className="relative min-h-screen overflow-hidden px-4 pt-28 sm:px-6 lg:px-8" aria-labelledby="hero-title">
       <Suspense fallback={<div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(34,211,238,0.16),transparent_44%)]" />}>
@@ -29,7 +31,7 @@ export default function Hero() {
           <p className="mt-4 max-w-3xl font-mono text-sm uppercase tracking-[0.18em] text-cyan-100/90">{hero.line}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <PrimaryButton href="#projects">View Projects</PrimaryButton>
-            <GhostButton href="#resume"><span className="inline-flex items-center gap-2"><Download className="h-4 w-4" /> Download CV</span></GhostButton>
+            <GhostButton href={cvUrl} download><span className="inline-flex items-center gap-2"><Download className="h-4 w-4" /> Download CV</span></GhostButton>
             <GhostButton href="#contact"><span className="inline-flex items-center gap-2"><Send className="h-4 w-4" /> Contact Me</span></GhostButton>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

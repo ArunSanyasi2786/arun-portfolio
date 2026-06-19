@@ -2,6 +2,7 @@ import Navbar from './components/Navbar.jsx';
 import Chatbot from './components/Chatbot.jsx';
 import Hero from './sections/Hero.jsx';
 import About from './sections/About.jsx';
+import Courses from './sections/Courses.jsx';
 import Skills from './sections/Skills.jsx';
 import Projects from './sections/Projects.jsx';
 import Experience from './sections/Experience.jsx';
@@ -17,6 +18,7 @@ export default function App() {
       <main className="relative z-10">
         <Hero />
         <About />
+        <Courses />
         <Skills />
         <Projects />
         <Experience />

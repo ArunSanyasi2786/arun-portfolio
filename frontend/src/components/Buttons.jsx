@@ -18,10 +18,10 @@ export function PrimaryButton({ href, children, onClick, download = false }) {
   );
 }
 
-export function GhostButton({ href, children, onClick }) {
+export function GhostButton({ href, children, onClick, download = false }) {
   const className = 'inline-flex items-center justify-center rounded-full border border-cyan-300/30 px-6 py-3 font-display text-sm font-bold text-cyan-100 transition hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-cyan-300/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-200';
   if (href) {
-    return <a className={className} href={href} onClick={onClick}>{children}</a>;
+    return <a className={className} href={href} onClick={onClick} download={download}>{children}</a>;
   }
   return <button className={className} onClick={onClick} type="button">{children}</button>;
 }
