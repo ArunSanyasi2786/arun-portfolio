@@ -131,41 +131,41 @@ export default function Chatbot() {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="mb-4 flex h-[620px] max-h-[calc(100vh-7rem)] w-[min(92vw,390px)] flex-col overflow-hidden rounded-[2rem] border border-cyan-300/20 bg-slate-950/82 shadow-cobalt backdrop-blur-2xl"
+            className="mb-4 flex h-[620px] max-h-[calc(100vh-7rem)] w-[min(92vw,390px)] flex-col overflow-hidden rounded-[2rem] border border-amber-300/20 bg-neutral-950/82 shadow-cobalt backdrop-blur-2xl"
           >
-            <div className="flex items-center justify-between border-b border-cyan-300/10 p-4">
+            <div className="flex items-center justify-between border-b border-amber-300/10 p-4">
               <div className="flex items-center gap-3">
-                <div className="grid h-10 w-10 place-items-center rounded-2xl bg-cyan-300/10 text-cyan-300"><Bot className="h-5 w-5" /></div>
+                <div className="grid h-10 w-10 place-items-center rounded-2xl bg-amber-300/10 text-amber-300"><Bot className="h-5 w-5" /></div>
                 <div>
                   <p className="font-display font-bold text-white">ArunBot</p>
-                  <p className="text-xs text-cyan-200">Portfolio assistant</p>
+                  <p className="text-xs text-amber-200">Portfolio assistant</p>
                 </div>
               </div>
-              <button type="button" onClick={() => setOpen(false)} className="rounded-full p-2 text-slate-300 hover:bg-cyan-300/10 hover:text-white" aria-label="Close ArunBot">
+              <button type="button" onClick={() => setOpen(false)} className="rounded-full p-2 text-neutral-300 hover:bg-amber-300/10 hover:text-white" aria-label="Close ArunBot">
                 <X className="h-5 w-5" />
               </button>
             </div>
             <div className="flex-1 space-y-3 overflow-y-auto p-4">
               {messages.map((message, index) => (
                 <div key={`${message.role}-${index}`} className={message.role === 'user' ? 'ml-auto max-w-[82%]' : 'mr-auto max-w-[88%]'}>
-                  <div className={`whitespace-pre-line rounded-2xl px-4 py-3 text-sm leading-6 ${message.role === 'user' ? 'bg-cyan-300 text-slate-950' : 'bg-white/[0.06] text-slate-200'}`}>
+                  <div className={`whitespace-pre-line rounded-2xl px-4 py-3 text-sm leading-6 ${message.role === 'user' ? 'bg-amber-300 text-neutral-950' : 'bg-white/[0.06] text-neutral-200'}`}>
                     {message.content}
                   </div>
                 </div>
               ))}
-              {typing && <div className="mr-auto w-fit rounded-2xl bg-white/[0.06] px-4 py-3 text-sm text-cyan-100">ArunBot is typing...</div>}
+              {typing && <div className="mr-auto w-fit rounded-2xl bg-white/[0.06] px-4 py-3 text-sm text-amber-100">ArunBot is typing...</div>}
             </div>
-            <div className="border-t border-cyan-300/10 p-4">
+            <div className="border-t border-amber-300/10 p-4">
               <div className="mb-3 flex gap-2 overflow-x-auto pb-1">
                 {suggestions.slice(0, 4).map((prompt) => (
-                  <button key={prompt} type="button" onClick={() => ask(prompt)} className="shrink-0 rounded-full border border-cyan-300/20 px-3 py-1.5 text-xs font-semibold text-cyan-100 hover:bg-cyan-300/10">
+                  <button key={prompt} type="button" onClick={() => ask(prompt)} className="shrink-0 rounded-full border border-amber-300/20 px-3 py-1.5 text-xs font-semibold text-amber-100 hover:bg-amber-300/10">
                     {prompt}
                   </button>
                 ))}
               </div>
               <form onSubmit={handleSubmit} className="flex gap-2">
-                <input ref={inputRef} className="min-w-0 flex-1 rounded-full border border-cyan-300/15 bg-slate-950/70 px-4 py-3 text-sm text-white placeholder:text-slate-500" placeholder="Ask about Arun..." aria-label="Ask ArunBot" />
-                <button type="submit" className="grid h-12 w-12 place-items-center rounded-full bg-cyan-300 text-slate-950 hover:bg-white" aria-label="Send message">
+                <input ref={inputRef} className="min-w-0 flex-1 rounded-full border border-amber-300/15 bg-neutral-950/70 px-4 py-3 text-sm text-white placeholder:text-neutral-500" placeholder="Ask about Arun..." aria-label="Ask ArunBot" />
+                <button type="submit" className="grid h-12 w-12 place-items-center rounded-full bg-amber-300 text-neutral-950 hover:bg-white" aria-label="Send message">
                   <Send className="h-4 w-4" />
                 </button>
               </form>
@@ -173,9 +173,9 @@ export default function Chatbot() {
           </motion.div>
         )}
       </AnimatePresence>
-      <button type="button" onClick={() => setOpen((value) => !value)} className="group grid h-16 w-16 place-items-center rounded-full bg-cyan-300 text-slate-950 shadow-neon transition hover:scale-105 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-200" aria-label="Open ArunBot chatbot">
+      <button type="button" onClick={() => setOpen((value) => !value)} className="group grid h-16 w-16 place-items-center rounded-full bg-amber-300 text-neutral-950 shadow-neon transition hover:scale-105 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-200" aria-label="Open ArunBot chatbot">
         {open ? <X className="h-7 w-7" /> : <MessageCircle className="h-7 w-7" />}
-        {!open && <Download className="absolute -left-1 -top-1 h-4 w-4 rounded-full bg-slate-950 p-0.5 text-cyan-200 opacity-80" />}
+        {!open && <Download className="absolute -left-1 -top-1 h-4 w-4 rounded-full bg-neutral-950 p-0.5 text-amber-200 opacity-80" />}
       </button>
     </div>
   );

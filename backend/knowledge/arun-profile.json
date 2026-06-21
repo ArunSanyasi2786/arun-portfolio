@@ -1,10 +1,10 @@
 {
   "name": "Arun Sanyasi",
   "title": "Instrumentation and Control Engineer",
-  "tagline": "PLC | SCADA | DCS | Electrical Control Systems | Industrial Automation",
+  "tagline": "Industrial Automation | PLC | SCADA | DCS | Sensors | Raspberry Pi | ESP32",
   "location": "Samdrup Jongkhar, Bhutan",
   "email": "sanyasiarun220@gmail.com",
-  "phone": "+975 77694520",
+  "phone": "+975 17914131",
   "github": "https://github.com/ArunSanyasi2786",
   "linkedin": "Add LinkedIn URL",
   "summary": "Instrumentation and Control Engineering graduate from College of Science and Technology with hands-on exposure to PLC/SCADA commissioning, industrial electrical maintenance, switchyard systems, MCCs, motor-control wiring, capacitor banks, sensors, industrial networking, digitization workflows and project development.",
@@ -44,6 +44,7 @@
     "electrical": ["Motor Control", "MCCs", "Switchyard Exposure", "33kV/11kV Systems", "Capacitor Banks", "VFD Control Wiring", "Electrical Testing", "Switchgear and Protection", "SLD Interpretation"],
     "networking": ["Industrial Networking", "Modbus RTU/TCP", "PROFINET", "PROFIBUS", "IP Configuration", "Troubleshooting"],
     "software": ["Python", "PyQt6 Basics", "SQLite", "QR Reports", "AutoCAD Electrical Basics", "EPLAN Electric P8", "Proteus", "MS Office"],
+    "embedded": ["ESP32", "Raspberry Pi", "Sensor Integration", "Serial Communication", "Prototype Development"],
     "softSkills": ["Troubleshooting discipline", "Technical reporting", "Team communication", "Safety awareness", "Learning agility", "Attention to detail"]
   },
   "courses": [
@@ -69,8 +70,8 @@
     { "title": "Handwritten Bills and Receipt Digitization App", "description": "Application workflow for detecting handwritten bills and receipts, reviewing captured information and storing records in digital format.", "technologies": ["OCR Workflow", "Digital Records", "Networking", "Troubleshooting"] },
     { "title": "Electrical Analysis Case Studies", "description": "Case studies on solar microgrid with load management, AI-driven battery management systems for EVs and solid-state transformers for grid modernization.", "technologies": ["Power Systems", "Solar Microgrid", "BMS", "SST", "Load Management"] }
   ],
-  "certifications": ["Electrical Testing Equipment Techniques", "VFD Control Wiring Diagram Techniques - 179 lessons", "PLC Simulator Factory", "Oil and Gas Industry Fundamentals", "Robotic Process Automation for Developers", "Selenium with Python from Scratch", "AI Industry Analysis", "Business Entrepreneurship"],
-  "documents": ["Download CV", "Download Portfolio PDF", "Project Portfolio / Report", "Experience / Letter PDF", "Recommendation Placeholder"],
+  "certifications": ["Management Leadership - Saylor Academy", "Principles of Management - Mindluster", "Electric Motor Control Systems - Mindluster", "SCADA Software System Basics - Mindluster", "Artificial Intelligence for Robotics - Mindluster", "AI Industry Analysis - Mindluster", "Business Productivity for Entrepreneurs - Mindluster"],
+  "documents": ["Finalized one-page resume", "Detailed four-page CV", "Project Portfolio / Report", "Experience / Letter PDF", "Project Management enrollment confirmation and course material"],
   "academicContributions": ["IEEE publication: Design and Development of a Basic Health Monitoring Station.", "Participated in Student Research Meet organised by Royal University of Bhutan (RUB).", "Final Year Major Project work covering hardware design, sensor calibration, GUI workflow, data handling and QR report generation."],
   "chatSuggestedPrompts": ["Tell me about Arun's final year project.", "What PLC and SCADA skills does Arun have?", "What courses has Arun learned?", "What are Arun's soft skills?", "What is Arun's weakness?", "Download Arun's CV"]
 }

@@ -9,19 +9,19 @@ export default {
         mono: ['JetBrains Mono', 'ui-monospace']
       },
       colors: {
-        ink: '#030814',
-        panel: '#071426',
-        electric: '#22d3ee',
-        cobalt: '#2563eb',
-        neon: '#67e8f9',
-        steel: '#8aa4c2'
+        ink: '#050505',
+        panel: '#111111',
+        electric: '#F5C542',
+        cobalt: '#D99A00',
+        neon: '#FFE08A',
+        steel: '#B7B7B7'
       },
       boxShadow: {
-        neon: '0 0 30px rgba(34, 211, 238, 0.34)',
-        cobalt: '0 20px 80px rgba(37, 99, 235, 0.28)'
+        neon: '0 0 30px rgba(245, 197, 66, 0.34)',
+        cobalt: '0 20px 80px rgba(217, 154, 0, 0.28)'
       },
       backgroundImage: {
-        'grid-blue': 'linear-gradient(rgba(34,211,238,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,0.12) 1px, transparent 1px)'
+        'grid-gold': 'linear-gradient(rgba(245,197,66,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(245,197,66,0.12) 1px, transparent 1px)'
       }
     }
   },

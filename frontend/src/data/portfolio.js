@@ -1,23 +1,13 @@
 import profileImage from '../assets/profile/arun-sanyasi-profile.jpg';
 import kioskMachine from '../assets/projects/bhms-kiosk-machine.webp';
 import measuringAssistant from '../assets/projects/bhms-measuring-assistant.webp';
-import resultsInterface from '../assets/projects/bhms-results-interface.webp';
-import qrInterface from '../assets/projects/bhms-qr-interface.webp';
 import sensorChart from '../assets/projects/sensor-reference-chart.webp';
-import sampleOutput from '../assets/projects/bhms-sample-output.webp';
 import reportPreview from '../assets/projects/final-report-preview.webp';
-import extractedPptDevice from '../assets/projects/extracted-basic-health-monitoring-station-02.webp';
 import extractedDashboard from '../assets/projects/extracted-group-3-basic-health-monitoring-station-01.webp';
-import aiHealthKiosk from '../assets/projects/ai-generated/ai-health-monitoring-kiosk.webp';
-import aiDamControl from '../assets/projects/ai-generated/ai-plc-dam-control.webp';
-import aiElectricalSystems from '../assets/projects/ai-generated/ai-industrial-electrical-systems.webp';
-import aiVehicleDetector from '../assets/projects/ai-generated/ai-smart-vehicle-accident-detector.webp';
-import aiReceiptDigitization from '../assets/projects/ai-generated/ai-receipt-digitization-app.webp';
-import aiSmartGrid from '../assets/projects/ai-generated/ai-smart-grid-case-studies.webp';
 
 export const contact = {
   email: 'sanyasiarun220@gmail.com',
-  phone: '+975 77694520',
+  phone: '+975 17914131',
   location: 'Samdrup Jongkhar, Bhutan',
   github: 'https://github.com/ArunSanyasi2786',
   linkedin: 'Add your LinkedIn URL'
@@ -26,7 +16,7 @@ export const contact = {
 export const hero = {
   name: 'Arun Sanyasi',
   role: 'Instrumentation and Control Engineer',
-  line: 'PLC | SCADA | DCS | Electrical Control Systems | Industrial Automation',
+  line: 'Industrial Automation | PLC | SCADA | DCS | Sensors | Raspberry Pi | ESP32',
   intro:
     'Engineering graduate focused on PLC/SCADA systems, industrial instrumentation, electrical control systems, switchgear protection, drives, sensor networks and reliable plant automation.',
   profileImage
@@ -170,7 +160,8 @@ export const technicalSkills = [
   { title: 'Industrial Communication', group: 'Networks', items: ['Modbus', 'PROFINET', 'PROFIBUS', 'IP Configuration'] },
   { title: 'Biomedical Sensors', group: 'Measurement', items: ['SpO2/Pulse', 'Temperature', 'BMI Workflow', 'Patient Monitoring'] },
   { title: 'Engineering Software', group: 'Tools', items: ['EPLAN Electric P8', 'AutoCAD Basics', 'Proteus', 'MS Office'] },
-  { title: 'Python and Interface Basics', group: 'Software', items: ['PyQt6 GUI', 'SQLite', 'QR Reports', 'Testing Basics'] }
+  { title: 'Python and Interface Basics', group: 'Software', items: ['PyQt6 GUI', 'SQLite', 'QR Reports', 'Testing Basics'] },
+  { title: 'Embedded Systems', group: 'Prototyping', items: ['ESP32', 'Raspberry Pi', 'Sensor Integration', 'Serial Communication'] }
 ];
 
 export const softSkills = [
@@ -187,97 +178,113 @@ export const projects = [
     title: 'Basic Health Monitoring Station',
     subtitle: 'Final Year Major Project',
     category: 'Biomedical Instrumentation',
-    image: aiHealthKiosk,
-    gallery: [aiHealthKiosk, kioskMachine, measuringAssistant, extractedDashboard, reportPreview],
+    visual: 'health',
+    gallery: [kioskMachine, measuringAssistant, extractedDashboard, reportPreview],
+    objective: 'Create one guided station that captures multiple basic health measurements and produces a usable digital result.',
     description:
       'Biomedical kiosk that measures BMI, pulse rate, SpO2, respiratory rate, body temperature, height and weight, then generates digital reports and QR-based result handoff.',
     technologies: ['Biomedical Sensors', 'PyQt6', 'MAX30102', 'Temperature Sensor', 'SQLite', 'QR Reports'],
     details: ['Designed a guided health-check workflow from measurement to stored report.', 'Integrated sensor readings with a user-facing interface and output record.', 'Built project documentation for presentation, demonstration and research-style communication.'],
-    impact: 'Converted multi-parameter health measurement into a guided kiosk workflow with real-time UI, storage and reporting.'
+    impact: 'Converted multi-parameter health measurement into a guided kiosk workflow with real-time UI, storage and reporting.',
+    relevance: 'Demonstrates sensor integration, validation, human-machine interface design and end-to-end instrumentation workflow development.'
   },
   {
     title: 'PLC Based Dam Water Level Indicator and Control System',
     subtitle: 'PLC / SCADA Project',
     category: 'Hydropower Automation',
-    image: aiDamControl,
-    gallery: [aiDamControl, extractedPptDevice, sampleOutput, reportPreview],
+    visual: 'dam',
+    gallery: [],
+    objective: 'Develop safe PLC control logic for water-level monitoring, alarms and gate operation under automatic and manual modes.',
     description:
       'Water-level monitoring and gate-control logic using PLC concepts, interlocks, alarms, auto/manual modes and PID-based control thinking.',
     technologies: ['PLC', 'SCADA', 'HMI', 'PID', 'Gate Control', 'Level Monitoring'],
     details: ['Modeled safe level monitoring with alarm and decision logic.', 'Applied gate-control thinking for inlet/outlet/flushing workflows.', 'Connected control logic to operator visibility through HMI/SCADA concepts.'],
-    impact: 'Aligned instrumentation logic with safer dam level management and operator visibility.'
+    impact: 'Aligned instrumentation logic with safer dam level management and operator visibility.',
+    relevance: 'Applies PLC sequencing, interlocks, PID concepts and SCADA visibility to a hydropower control problem.'
   },
   {
     title: 'Material Handling and Conveyor Automation',
     subtitle: 'Factory Automation Practice',
     category: 'Automation Logic',
-    image: resultsInterface,
-    gallery: [resultsInterface, qrInterface, sensorChart],
+    visual: 'conveyor',
+    gallery: [],
+    objective: 'Model reliable conveyor sequencing, sorting and operator control with industrial interlocks.',
     description:
       'PLC and HMI practice around material handling, conveyor sequencing, sorting, filling, capping, storage and operator display logic.',
     technologies: ['CODESYS', 'Factory I/O', 'Ladder Logic', 'HMI', 'Conveyors'],
     details: ['Practiced sequence logic and interlocks for conveyor movement.', 'Structured HMI views for status and operator control.', 'Connected academic PLC logic with factory-style process flow.'],
-    impact: 'Built confidence in automation sequencing and manufacturing-line logic.'
+    impact: 'Built confidence in automation sequencing and manufacturing-line logic.',
+    relevance: 'Shows understanding of factory automation states, permissives, fault handling and HMI status presentation.'
   },
   {
     title: 'SICAM A8000 Boiler Monitoring and SCADA Screens',
     subtitle: 'Industrial Monitoring',
     category: 'PLC / SCADA',
-    image: aiElectricalSystems,
-    gallery: [aiElectricalSystems, resultsInterface, sensorChart],
+    visual: 'scada',
+    gallery: [],
+    objective: 'Monitor boiler process variables through an operator-facing SCADA interface backed by verified field I/O.',
     description:
       'PLC/SCADA monitoring concept using SICAM Workbench and SCALA 250 for temperature, pressure and level loops with operator-facing screens.',
     technologies: ['SICAM A8000', 'SCALA 250', 'SCADA', 'Loop Checks', 'EPLAN'],
     details: ['Mapped monitored variables to operator display concepts.', 'Applied loop-check and point-to-point validation thinking.', 'Used drawing-based verification to connect field signals and panels.'],
-    impact: 'Strengthened commissioning-style thinking for real industrial control systems.'
+    impact: 'Strengthened commissioning-style thinking for real industrial control systems.',
+    relevance: 'Connects field instrumentation, PLC data, loop checking and SCADA visualization in a commissioning context.'
   },
   {
     title: 'Smart Vehicle Accident Detector for Bhutanese Road Systems',
     subtitle: 'Road Safety Concept',
     category: 'Electronics / Safety',
-    image: aiVehicleDetector,
-    gallery: [aiVehicleDetector, qrInterface, extractedPptDevice],
+    visual: 'accident',
+    gallery: [],
+    objective: 'Detect potential vehicle accidents and initiate an alert workflow suited to mountainous Bhutanese road conditions.',
     description:
       'Accident detection and alerting concept designed around Bhutanese road conditions, embedded sensing and emergency-response thinking.',
     technologies: ['Embedded Sensing', 'Alert Logic', 'Road Safety', 'Signal Processing'],
     details: ['Focused on mountainous-road safety and emergency response context.', 'Used event-detection logic to trigger alert workflow concepts.', 'Connected electronics thinking with a local real-world safety problem.'],
-    impact: 'Explored automation-driven safety response for local transport challenges.'
+    impact: 'Explored automation-driven safety response for local transport challenges.',
+    relevance: 'Demonstrates embedded event detection, sensor logic and safety-focused system thinking.'
   },
   {
     title: 'Handwritten Bills and Receipt Digitization App',
     subtitle: 'Fuzzy Automation Internship',
     category: 'Digitization / Automation',
-    image: aiReceiptDigitization,
-    gallery: [aiReceiptDigitization, sampleOutput, extractedDashboard],
+    visual: 'receipt',
+    gallery: [],
+    objective: 'Convert handwritten bills and receipts into reviewable, searchable and stored digital records.',
     description:
       'Application workflow for detecting handwritten bills and receipts, reviewing captured information and storing records in digital format.',
     technologies: ['OCR Workflow', 'Digital Records', 'Networking', 'Configuration', 'Troubleshooting'],
     details: ['Supported capture-to-storage workflow testing.', 'Worked on configuration, network checks and troubleshooting.', 'Connected automation thinking with business document digitization.'],
-    impact: 'Improved understanding of practical software workflow testing and deployment support.'
+    impact: 'Improved understanding of practical software workflow testing and deployment support.',
+    relevance: 'Shows automation beyond plant hardware through OCR workflow testing, networking, configuration and troubleshooting.'
   },
   {
     title: 'Electrical Analysis Case Studies',
     subtitle: 'Power and Energy Systems',
     category: 'Electrical Analysis',
-    image: aiSmartGrid,
-    gallery: [aiSmartGrid, sensorChart, reportPreview],
+    visual: 'energy',
+    gallery: [],
+    objective: 'Compare emerging electrical technologies for load management, EV battery intelligence and grid modernization.',
     description:
       'Case studies on solar microgrid with load management, AI-driven battery management systems for EVs and solid-state transformers for grid modernization.',
     technologies: ['Solar Microgrid', 'Load Management', 'EV BMS', 'SST', 'Power Systems'],
     details: ['Studied load management and smart-grid reliability concepts.', 'Explored AI-driven BMS ideas for electric vehicles.', 'Reviewed solid-state transformer relevance for grid modernization.'],
-    impact: 'Expanded electrical engineering perspective beyond control panels into modern energy systems.'
+    impact: 'Expanded electrical engineering perspective beyond control panels into modern energy systems.',
+    relevance: 'Connects automation and control knowledge with smart-grid reliability, energy storage and power-electronics trends.'
   },
   {
     title: 'Instrumentation and Sensor Integration Practice',
     subtitle: 'Sensor Systems',
     category: 'Instrumentation',
-    image: sensorChart,
-    gallery: [sensorChart, aiHealthKiosk, qrInterface],
+    visual: 'sensors',
+    gallery: [sensorChart],
+    objective: 'Acquire, validate and present sensor measurements through dependable instrumentation signal paths.',
     description:
       'Work with biomedical sensors, temperature sensing, pulse sensing, signal validation, control hardware and interface feedback.',
     technologies: ['Sensors', 'Transducers', 'Signal Validation', 'Biomedical Measurement', 'Data Logging'],
     details: ['Compared sensor behavior against expected measurement ranges.', 'Practiced signal flow from device to user interface.', 'Built awareness of calibration, reliability and measurement context.'],
-    impact: 'Integrated sensor signals into user-facing measurements and reports.'
+    impact: 'Integrated sensor signals into user-facing measurements and reports.',
+    relevance: 'Demonstrates core instrumentation practice: transducers, signal validation, calibration awareness and data logging.'
   }
 ];
 
@@ -327,18 +334,23 @@ export const experiences = [
 ];
 
 export const certifications = [
-  { title: 'Electrical Testing Equipment Techniques', focus: 'Testing instruments, safety checks and electrical maintenance readiness.', file: 'files/certificates/electrical-testing-equipment-techniques.pdf' },
-  { title: 'VFD Control Wiring Diagram Techniques', focus: '179 lessons covering VFD wiring, motor-control circuits and drive troubleshooting.', file: 'files/certificates/vfd-control-wiring-diagram-techniques.pdf' },
-  { title: 'PLC Simulator Factory', focus: 'PLC simulation practice for factory automation logic.', file: 'files/certificates/plc-simulator-factory.pdf' },
-  { title: 'Oil and Gas Industry Fundamentals', focus: 'Process-industry fundamentals and plant-operation awareness.', file: 'files/certificates/oil-and-gas-industry-fundamentals.pdf' },
-  { title: 'Robotic Process Automation for Developers', focus: 'Automation workflow thinking and software process support.', file: 'files/certificates/robotic-process-automation-for-developers.pdf' },
-  { title: 'Selenium with Python from Scratch', focus: 'Testing mindset, Python basics and browser automation fundamentals.', file: 'files/certificates/selenium-with-python-from-scratch.pdf' },
-  { title: 'AI Industry Analysis', focus: 'Awareness of AI applications and industry impact.', file: 'files/certificates/ai-industry-analysis.pdf' },
-  { title: 'Business Entrepreneurship', focus: 'Business initiative, value creation and professional communication.', file: 'files/certificates/business-entrepreneurship.pdf' }
+  { title: 'Management Leadership', issuer: 'Saylor Academy', date: 'June 2026', focus: 'Management leadership fundamentals and structured organizational decision-making.', file: 'files/certificates/management-leadership.pdf', verified: true },
+  { title: 'Principles of Management', issuer: 'Mindluster', date: 'June 2026', focus: 'Management principles, organizational practice and professional coordination.', file: 'files/certificates/principles-of-management.pdf', verified: true },
+  { title: 'Electric Motor Control Systems', issuer: 'Mindluster', date: 'June 2026', focus: 'Motor-control system fundamentals relevant to drives, panels and industrial maintenance.', file: 'files/certificates/electric-motor-control-systems.pdf', verified: true },
+  { title: 'SCADA Software System Basics', issuer: 'Mindluster', date: 'June 2026', focus: 'Foundational SCADA software concepts for industrial monitoring and operator interfaces.', file: 'files/certificates/scada-software-system-basics.pdf', verified: true },
+  { title: 'Artificial Intelligence for Robotics', issuer: 'Mindluster', date: 'June 2026', focus: 'AI concepts connected with robotics and automated decision workflows.', file: 'files/certificates/artificial-intelligence-for-robotics.pdf', verified: true },
+  { title: 'AI Industry Analysis', issuer: 'Mindluster', date: 'June 2026', focus: 'AI applications, adoption patterns and industry impact.', file: 'files/certificates/ai-industry-analysis.pdf', verified: true },
+  { title: 'Business Productivity for Entrepreneurs', issuer: 'Mindluster', date: 'June 2026', focus: 'Productivity, initiative and business fundamentals for technical entrepreneurship.', file: 'files/certificates/business-entrepreneurship.pdf', verified: true }
+];
+
+export const supportingLearningDocuments = [
+  { title: 'Project Management - Enrollment Confirmation', issuer: 'Brentwood Open Learning College', status: 'Course in progress', file: 'files/training/project-management-enrollment.pdf' },
+  { title: 'Project Management - Course Material', issuer: 'Brentwood Open Learning College', status: 'Learning resource', file: 'files/training/project-management-course-material.pdf' }
 ];
 
 export const documents = [
   { title: 'Download CV', eyebrow: 'Resume', description: 'One-page Arun Sanyasi resume uploaded for job applications.', href: 'files/arun-cv.pdf', primary: true },
+  { title: 'Download Detailed CV', eyebrow: 'Extended CV', description: 'Four-page engineering CV with expanded experience, projects, skills and education.', href: 'files/arun-detailed-cv.pdf' },
   { title: 'Download Portfolio PDF', eyebrow: 'Portfolio', description: 'Placeholder portfolio PDF ready for replacement with the final combined portfolio.', href: 'files/arun-portfolio.pdf' },
   { title: 'Project Portfolio / Report', eyebrow: 'Project Evidence', description: 'Existing Arun project portfolio PDF with electronics, PLC/SCADA and electrical analysis highlights.', href: 'files/arun-project-portfolio.pdf' },
   { title: 'Experience / Letter PDF', eyebrow: 'Document', description: 'Uploaded scanned letter/experience document for reference.', href: 'files/arun-experience-letter.pdf' },

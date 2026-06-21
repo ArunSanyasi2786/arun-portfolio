@@ -1,27 +1,49 @@
+import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { useState } from 'react';
+import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion.js';
 
-export function PrimaryButton({ href, children, onClick, download = false }) {
-  const className = 'group inline-flex items-center justify-center gap-2 rounded-full bg-cyan-300 px-6 py-3 font-display text-sm font-bold text-slate-950 shadow-neon transition hover:-translate-y-0.5 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-200';
-  if (href) {
-    return (
-      <a className={className} href={href} onClick={onClick} download={download}>
-        {children}
-        <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-      </a>
-    );
+function MagneticAction({ href, children, onClick, download = false, variant = 'primary' }) {
+  const reduced = usePrefersReducedMotion();
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const Component = href ? motion.a : motion.button;
+  const classes = variant === 'primary'
+    ? 'premium-cta premium-cta-primary group text-neutral-950 shadow-neon'
+    : 'premium-cta premium-cta-ghost group text-amber-100';
+
+  function handlePointerMove(event) {
+    if (reduced || event.pointerType === 'touch') return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 10;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 8;
+    setOffset({ x, y });
   }
+
+  const props = href
+    ? { href, download }
+    : { type: 'button' };
+
   return (
-    <button className={className} onClick={onClick} type="button">
-      {children}
-      <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-    </button>
+    <Component
+      {...props}
+      onClick={onClick}
+      onPointerMove={handlePointerMove}
+      onPointerLeave={() => setOffset({ x: 0, y: 0 })}
+      animate={offset}
+      transition={{ type: 'spring', stiffness: 260, damping: 18, mass: 0.25 }}
+      className={classes}
+    >
+      <span className="button-shine" aria-hidden="true" />
+      <span className="relative z-10 inline-flex items-center gap-2">{children}</span>
+      {variant === 'primary' && <ArrowUpRight className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />}
+    </Component>
   );
 }
 
-export function GhostButton({ href, children, onClick, download = false }) {
-  const className = 'inline-flex items-center justify-center rounded-full border border-cyan-300/30 px-6 py-3 font-display text-sm font-bold text-cyan-100 transition hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-cyan-300/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-200';
-  if (href) {
-    return <a className={className} href={href} onClick={onClick} download={download}>{children}</a>;
-  }
-  return <button className={className} onClick={onClick} type="button">{children}</button>;
+export function PrimaryButton(props) {
+  return <MagneticAction {...props} variant="primary" />;
+}
+
+export function GhostButton(props) {
+  return <MagneticAction {...props} variant="ghost" />;
 }

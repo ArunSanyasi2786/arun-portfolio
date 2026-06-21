@@ -13,12 +13,13 @@ https://arunsanyasi2786.github.io/arun-portfolio/
 ## Features
 
 - React + Vite frontend
-- Tailwind CSS futuristic blue/black design system
+- Tailwind CSS black, white and gold industrial design system
 - Framer Motion scroll reveal and interaction animations
-- React Three Fiber hero scene with starfield, torus knot, distorted sphere and wireframe geometry
+- React Three Fiber hero scene with a PLC panel, HMI, signal lines, sensor labels and lightweight engineering geometry
 - Responsive layout for mobile, tablet, laptop and desktop
 - Profile image with rotating conic-gradient halo and orbiting skill tags
-- Project cards with extracted portfolio images and detail modals
+- Eight original code-generated SVG project illustrations with objective, outcome and engineering-relevance modals
+- Dedicated verified Certificates section with PDF viewers and clearly labelled in-progress learning evidence
 - Resume/CV download section with runtime PDF availability check
 - Contact form UI with optional backend submission
 - Express backend with `/api/chat`, `/api/contact` and `/api/health`
@@ -100,18 +101,19 @@ Default local URLs:
 - Backend: `http://localhost:8080`
 - Health check: `http://localhost:8080/api/health`
 
-## CV / Portfolio PDF
+## CV / Portfolio PDFs
 
-Place the final PDF here:
+The website currently publishes two verified CV versions:
+
+```text
+frontend/public/files/arun-cv.pdf
+frontend/public/files/arun-detailed-cv.pdf
+```
+
+The project-portfolio download uses this replaceable file:
 
 ```text
 frontend/public/files/arun-portfolio.pdf
-```
-
-The download button checks for this file at runtime. If it is missing, the website shows:
-
-```text
-Portfolio PDF will be available soon.
 ```
 
 ## ArunBot Chatbot
@@ -224,7 +226,8 @@ Privacy rules followed:
 
 ## Manual Details To Fill Later
 
-- Replace `frontend/public/files/arun-portfolio.pdf` with the final CV/portfolio PDF.
+- Replace `frontend/public/files/arun-portfolio.pdf` with the final combined project-portfolio PDF.
+- Remaining placeholder certificate PDFs are retained for later replacement but are not displayed as verified credentials.
 - Add Arun's real LinkedIn URL in `frontend/src/data/portfolio.js` and `backend/knowledge/arun-profile.json`.
 - Update contact details if a different public email/phone should be used.
 - Add live project links if repositories or demos become available.
