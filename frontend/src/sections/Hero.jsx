@@ -10,7 +10,7 @@ import { fadeUp, scaleIn, staggerContainer } from '../utils/motion.js';
 const ThreeHeroCanvas = lazy(() => import('../components/ThreeHeroCanvas.jsx'));
 
 const heroCounters = [
-  { end: 8, suffix: '+', label: 'Engineering Projects', detail: 'Automation, instrumentation and electrical systems' },
+  { end: 9, suffix: '+', label: 'Engineering Projects', detail: 'Automation, instrumentation and electrical systems' },
   { end: 15, suffix: '+', label: 'Automation Skills', detail: 'PLC, SCADA, DCS, HMI, networks and control' },
   { end: 6, suffix: '+', label: 'Sensors Integrated', detail: 'Biomedical, temperature and measurement devices' },
   { end: 10, suffix: '+', label: 'Industrial Tools', detail: 'Engineering software, panels and commissioning tools' }

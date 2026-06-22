@@ -18,7 +18,7 @@ https://arunsanyasi2786.github.io/arun-portfolio/
 - React Three Fiber hero scene with a PLC panel, HMI, signal lines, sensor labels and lightweight engineering geometry
 - Responsive layout for mobile, tablet, laptop and desktop
 - Profile image with rotating conic-gradient halo and orbiting skill tags
-- Eight original code-generated SVG project illustrations with objective, outcome and engineering-relevance modals
+- Nine original code-generated SVG project illustrations, including HVAC automation, with objective, outcome and engineering-relevance modals
 - Dedicated verified Certificates section with PDF viewers and clearly labelled in-progress learning evidence
 - Resume/CV download section with runtime PDF availability check
 - Contact form UI with optional backend submission
@@ -103,7 +103,7 @@ Default local URLs:
 
 ## CV / Portfolio PDFs
 
-The website currently publishes two verified CV versions:
+The website publishes Arun's new authoritative resume and detailed CV:
 
 ```text
 frontend/public/files/arun-cv.pdf
@@ -228,6 +228,8 @@ Privacy rules followed:
 
 - Replace `frontend/public/files/arun-portfolio.pdf` with the final combined project-portfolio PDF.
 - Remaining placeholder certificate PDFs are retained for later replacement but are not displayed as verified credentials.
+- Upload the Coursera certificate for `PLC and HMI from Scratch Specialization`; it is listed in the new CV but remains marked as evidence pending.
+- Confirm the provider and upload completion evidence for `Business Entrepreneurship`; it is not counted as verified yet.
 - Add Arun's real LinkedIn URL in `frontend/src/data/portfolio.js` and `backend/knowledge/arun-profile.json`.
 - Update contact details if a different public email/phone should be used.
 - Add live project links if repositories or demos become available.

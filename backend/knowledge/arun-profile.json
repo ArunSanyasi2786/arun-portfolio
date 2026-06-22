@@ -7,45 +7,154 @@
   "phone": "+975 17914131",
   "github": "https://github.com/ArunSanyasi2786",
   "linkedin": "Add LinkedIn URL",
-  "summary": "Instrumentation and Control Engineering graduate from College of Science and Technology with hands-on exposure to PLC/SCADA commissioning, industrial electrical maintenance, switchyard systems, MCCs, motor-control wiring, capacitor banks, sensors, industrial networking, digitization workflows and project development.",
+  "summary": "Instrumentation and Control Engineering graduate from the College of Science and Technology with practical exposure to hydropower automation, PLC/SCADA commissioning, HT/LT panel assembly, facility automation, ferro-alloy plant electrical systems, field instrumentation, maintenance coordination, technical reporting and leadership.",
   "weaknessStatement": "One weakness I am working on is that sometimes I focus too much on technical details, especially when checking PLC logic, wiring, or sensor readings. I want everything to be accurate, so I may spend extra time verifying small details. However, I am improving this by planning my work better, setting priorities, and asking for feedback when needed. This helps me maintain accuracy while also completing tasks on time.",
   "positiveProfile": "Arun shows strong curiosity, persistence and care for engineering accuracy. He keeps improving through notes, project work, feedback and hands-on practice. He is especially suited to roles where troubleshooting, documentation, safety awareness and willingness to learn matter.",
   "education": [
-    { "degree": "B.E. in Instrumentation and Control Engineering", "institution": "College of Science and Technology, Royal University of Bhutan", "location": "Phuentsholing, Bhutan", "period": "2022 - 2026", "note": "68.21% till 7th semester" },
-    { "degree": "Higher Secondary Education, Class XII", "institution": "Karmaling Higher Secondary School", "period": "2020 - 2021", "note": "70.2%" },
-    { "degree": "Secondary Education, Class X", "institution": "BCSE", "period": "2019", "note": "78.14%" }
+    {
+      "degree": "B.E. in Instrumentation and Control Engineering",
+      "institution": "College of Science and Technology, Royal University of Bhutan",
+      "location": "Phuentsholing, Bhutan",
+      "period": "2022 - 2026",
+      "note": "68.21% till 7th semester"
+    },
+    {
+      "degree": "Higher Secondary Education, Class XII",
+      "institution": "Karmaling Higher Secondary School",
+      "period": "2020 - 2022",
+      "note": "70.2%"
+    },
+    {
+      "degree": "Secondary Education, Class X",
+      "institution": "BCSE",
+      "period": "2019",
+      "note": "78.14%"
+    }
   ],
   "experience": [
     {
-      "role": "Graduate Engineer Trainee - Automation and Commissioning",
-      "organization": "Bhutan Automation and Engineering Limited, Dagachhu Hydropower Plant",
-      "period": "83 days",
-      "focus": "Hydropower automation, desilter and dam control works",
-      "points": ["Developed ladder-logic control for inlet, outlet and flushing gate systems on Siemens SICAM A8000.", "Built SCALA 250 SCADA/HMI screens for equipment status, alarms and gate visualization.", "Performed point-to-point I/O verification, loop checks and field-wiring validation using EPLAN Electric P8 drawings."]
+      "role": "Graduate Engineer Trainee - Automation, SCADA and Commissioning",
+      "organization": "Bhutan Automation and Engineering Limited - Dagachhu Hydropower Project / Tala Panel Works",
+      "period": "12 weeks",
+      "focus": "Hydropower automation, SCADA integration, commissioning and HT/LT panel assembly",
+      "points": [
+        "Developed inlet, outlet and flushing-gate logic with manual, automatic, remote and local modes on Siemens SICAM A8000.",
+        "Built SCALA 250 screens, mapped signals and supported testing, field verification and commissioning.",
+        "Contributed to ACB/MCCB installation, internal wiring, busbars, controller-card uploads and final inspection support."
+      ]
     },
     {
       "role": "Instrumentation and Electrical Automation Intern",
       "organization": "Druk Wang Alloys Limited (DWAL)",
-      "period": "Dec 2024 - Jan 2025",
-      "focus": "Ferro-alloy plant, switchyard, MCC, motor-control wiring, capacitor bank and protection exposure",
-      "points": ["Traced field signals from sensors and instruments to panels across MCCs and 33kV/11kV electrical systems.", "Observed switchyard operations, switchgear, protection relay practices, capacitor banks and capacitor discharge safety.", "Reviewed motor-control wiring, preventive maintenance practices and CMMS-style maintenance records."]
+      "period": "06 Dec 2024 - 03 Jan 2025",
+      "focus": "Ferro-alloy electrical systems, protection, 18 MVA furnaces, motor control and field instrumentation",
+      "points": [
+        "Gained exposure to switchyard, HT/LT substations, RMHS, PLC, GCP, MCC, hydraulics and pumphouse systems.",
+        "Reviewed differential, overcurrent, under/overvoltage, earth fault and restricted earth fault protection.",
+        "Studied DOL, Star-Delta, Forward-Reverse wiring, soft starters, VFDs, RTDs, thermocouples, flow and pressure devices."
+      ]
     },
     {
       "role": "Automation and Digitization App Intern",
       "organization": "Fuzzy Automation",
       "period": "Jul 2025",
-      "focus": "Handwritten bills and receipts digitization app, networking and troubleshooting",
-      "points": ["Supported an app for detecting handwritten bills and receipts and storing records in digital format.", "Contributed to capture-to-storage workflow testing, detection review and structured digital archiving.", "Worked on device configuration, networking basics and troubleshooting during workflow testing."]
+      "focus": "Receipt digitization, CCTV connectivity, networking, device checks and service support",
+      "points": [
+        "Supported handwritten bill and receipt digitization, structured storage and searchable digital records.",
+        "Contributed to capture-to-storage validation, device configuration and troubleshooting.",
+        "Assisted hotel CCTV connectivity, equipment checks, task reporting and follow-up for reliable operations."
+      ]
     }
   ],
   "skills": {
-    "automation": ["PLC Programming", "Siemens TIA Portal", "Siemens SICAM A8000", "SCADA Systems", "SCALA 250", "WinCC", "DCS Concepts", "HMI Design", "CODESYS", "Factory I/O"],
-    "instrumentation": ["Sensors and Transducers", "Loop Checks", "I/O Verification", "Biomedical Sensors", "Temperature Sensors", "Pulse and SpO2 Sensing", "Field Signal Tracing"],
-    "electrical": ["Motor Control", "MCCs", "Switchyard Exposure", "33kV/11kV Systems", "Capacitor Banks", "VFD Control Wiring", "Electrical Testing", "Switchgear and Protection", "SLD Interpretation"],
-    "networking": ["Industrial Networking", "Modbus RTU/TCP", "PROFINET", "PROFIBUS", "IP Configuration", "Troubleshooting"],
-    "software": ["Python", "PyQt6 Basics", "SQLite", "QR Reports", "AutoCAD Electrical Basics", "EPLAN Electric P8", "Proteus", "MS Office"],
-    "embedded": ["ESP32", "Raspberry Pi", "Sensor Integration", "Serial Communication", "Prototype Development"],
-    "softSkills": ["Troubleshooting discipline", "Technical reporting", "Team communication", "Safety awareness", "Learning agility", "Attention to detail"]
+    "automation": [
+      "PLC Programming",
+      "Ladder Logic",
+      "Structured Text",
+      "Siemens SICAM A8000",
+      "Siemens S7-1200",
+      "SCALA 250",
+      "TIA Portal",
+      "WinCC",
+      "DCS Concepts",
+      "HMI Design",
+      "CODESYS",
+      "Factory I/O",
+      "FluidSIM"
+    ],
+    "instrumentation": [
+      "RTDs",
+      "Thermocouples",
+      "Flow Monitors",
+      "Pressure Transmitters",
+      "Loop Checks",
+      "I/O Verification",
+      "Biomedical Sensors",
+      "Field Signal Tracing"
+    ],
+    "electrical": [
+      "HT/LT Panels",
+      "MCCs",
+      "ACB/MCCB",
+      "Busbars",
+      "Motor Control",
+      "Soft Starters",
+      "VFDs",
+      "33kV/11kV Exposure",
+      "Differential Protection",
+      "Earth Fault / REF",
+      "SIPROTEC",
+      "ABB Relion",
+      "GE Multilin"
+    ],
+    "networking": [
+      "Industrial Networking",
+      "Modbus RTU/TCP",
+      "PROFINET",
+      "PROFIBUS",
+      "IP Configuration",
+      "Troubleshooting"
+    ],
+    "software": [
+      "Python",
+      "PyQt6",
+      "C",
+      "C++",
+      "Arduino IDE",
+      "SQLite",
+      "QR Reports",
+      "AutoCAD Electrical",
+      "EPLAN Electric P8",
+      "Proteus",
+      "SolidWorks",
+      "Fusion 360",
+      "MS Office"
+    ],
+    "embedded": [
+      "ESP32",
+      "Raspberry Pi",
+      "Sensor Integration",
+      "Serial Communication",
+      "Prototype Development"
+    ],
+    "softSkills": [
+      "Operations coordination",
+      "Technical reporting",
+      "Team communication",
+      "Safety awareness",
+      "Service orientation",
+      "Calm decision making",
+      "Learning agility",
+      "Attention to detail"
+    ],
+    "facility": [
+      "HVAC Control Concepts",
+      "CCTV Connectivity",
+      "Sensors and Alarms",
+      "Equipment Checks",
+      "Preventive Maintenance Records",
+      "Operations Reporting"
+    ]
   },
   "courses": [
     "CAS - Process Control",
@@ -62,16 +171,137 @@
     "Distributed Control System"
   ],
   "projects": [
-    { "title": "Basic Health Monitoring Station", "description": "Final-year biomedical kiosk for measuring BMI, pulse rate, SpO2, respiratory rate, body temperature, height and weight with real-time reporting and QR-code based handoff.", "technologies": ["Biomedical Sensors", "PyQt6", "MAX30102", "Temperature Sensors", "QR Reports", "SQLite"] },
-    { "title": "PLC Based Dam Water Level Indicator and Control System", "description": "Water-level monitoring and control logic for safer dam level management using PLC concepts, interlocks and level-control sequencing.", "technologies": ["PLC", "Ladder Logic", "SCADA", "HMI", "PID Concepts"] },
-    { "title": "SICAM A8000 Boiler Monitoring and SCADA Screens", "description": "PLC/SCADA monitoring concept using SICAM Workbench and SCALA 250 for temperature, pressure and level-control loops.", "technologies": ["SICAM A8000", "SCALA 250", "SCADA", "Loop Checks", "EPLAN"] },
-    { "title": "Material Handling and Conveyor Automation", "description": "PLC and HMI practice around material handling, conveyor sequencing, sorting, filling, capping, storage and operator display logic.", "technologies": ["CODESYS", "Factory I/O", "Conveyors", "HMI"] },
-    { "title": "Smart Vehicle Accident Detector for Bhutanese Road Systems", "description": "Accident detection and alerting concept designed for Bhutanese road conditions with embedded sensing and emergency-response thinking.", "technologies": ["Embedded Sensing", "Sensors", "Road Safety", "Alerting Logic"] },
-    { "title": "Handwritten Bills and Receipt Digitization App", "description": "Application workflow for detecting handwritten bills and receipts, reviewing captured information and storing records in digital format.", "technologies": ["OCR Workflow", "Digital Records", "Networking", "Troubleshooting"] },
-    { "title": "Electrical Analysis Case Studies", "description": "Case studies on solar microgrid with load management, AI-driven battery management systems for EVs and solid-state transformers for grid modernization.", "technologies": ["Power Systems", "Solar Microgrid", "BMS", "SST", "Load Management"] }
+    {
+      "title": "Basic Health Monitoring Station",
+      "description": "Final-year biomedical kiosk for measuring BMI, pulse rate, SpO2, respiratory rate, body temperature, height and weight with real-time reporting and QR-code based handoff.",
+      "technologies": [
+        "Biomedical Sensors",
+        "PyQt6",
+        "MAX30102",
+        "Temperature Sensors",
+        "QR Reports",
+        "SQLite"
+      ]
+    },
+    {
+      "title": "HVAC System Automation and Control",
+      "description": "Facility automation concept covering temperature and airflow monitoring, fan and VFD operation, sensors, alarms, comfort, reliability and energy awareness.",
+      "technologies": [
+        "HVAC Control",
+        "Temperature Sensors",
+        "Airflow Monitoring",
+        "VFD",
+        "Alarms",
+        "Facility Operations"
+      ]
+    },
+    {
+      "title": "PLC Based Dam Water Level Indicator and Control System",
+      "description": "Water-level monitoring and control logic for safer dam level management using PLC concepts, interlocks and level-control sequencing.",
+      "technologies": [
+        "PLC",
+        "Ladder Logic",
+        "SCADA",
+        "HMI",
+        "PID Concepts"
+      ]
+    },
+    {
+      "title": "SICAM A8000 Boiler Monitoring and SCADA Screens",
+      "description": "PLC/SCADA monitoring concept using SICAM Workbench and SCALA 250 for temperature, pressure and level-control loops.",
+      "technologies": [
+        "SICAM A8000",
+        "SCALA 250",
+        "SCADA",
+        "Loop Checks",
+        "EPLAN"
+      ]
+    },
+    {
+      "title": "Material Handling and Conveyor Automation",
+      "description": "PLC and HMI practice around material handling, conveyor sequencing, sorting, filling, capping, storage and operator display logic.",
+      "technologies": [
+        "CODESYS",
+        "Factory I/O",
+        "Conveyors",
+        "HMI"
+      ]
+    },
+    {
+      "title": "Smart Vehicle Accident Detector for Bhutanese Road Systems",
+      "description": "Accident detection and alerting concept designed for Bhutanese road conditions with embedded sensing and emergency-response thinking.",
+      "technologies": [
+        "Embedded Sensing",
+        "Sensors",
+        "Road Safety",
+        "Alerting Logic"
+      ]
+    },
+    {
+      "title": "Handwritten Bills and Receipt Digitization App",
+      "description": "Application workflow for detecting handwritten bills and receipts, reviewing captured information and storing records in digital format.",
+      "technologies": [
+        "OCR Workflow",
+        "Digital Records",
+        "Networking",
+        "Troubleshooting"
+      ]
+    },
+    {
+      "title": "Electrical Analysis Case Studies",
+      "description": "Case studies on solar microgrid with load management, AI-driven battery management systems for EVs and solid-state transformers for grid modernization.",
+      "technologies": [
+        "Power Systems",
+        "Solar Microgrid",
+        "BMS",
+        "SST",
+        "Load Management"
+      ]
+    }
   ],
-  "certifications": ["Management Leadership - Saylor Academy", "Principles of Management - Mindluster", "Electric Motor Control Systems - Mindluster", "SCADA Software System Basics - Mindluster", "Artificial Intelligence for Robotics - Mindluster", "AI Industry Analysis - Mindluster", "Business Productivity for Entrepreneurs - Mindluster"],
-  "documents": ["Finalized one-page resume", "Detailed four-page CV", "Project Portfolio / Report", "Experience / Letter PDF", "Project Management enrollment confirmation and course material"],
-  "academicContributions": ["IEEE publication: Design and Development of a Basic Health Monitoring Station.", "Participated in Student Research Meet organised by Royal University of Bhutan (RUB).", "Final Year Major Project work covering hardware design, sensor calibration, GUI workflow, data handling and QR report generation."],
-  "chatSuggestedPrompts": ["Tell me about Arun's final year project.", "What PLC and SCADA skills does Arun have?", "What courses has Arun learned?", "What are Arun's soft skills?", "What is Arun's weakness?", "Download Arun's CV"]
+  "certifications": [
+    "BUS401: Management Leadership - Saylor Academy, 37 hours, grade 92.31% (verified PDF)",
+    "Principles of Management - Mindluster (verified PDF)",
+    "Electric Motor Control Systems - Mindluster (verified PDF)",
+    "SCADA Software System Basics - Mindluster (verified PDF)",
+    "Artificial Intelligence for Robotics - Mindluster (verified PDF)",
+    "AI Industry Analysis - Mindluster (verified PDF)",
+    "Business Productivity for Entrepreneurs - Mindluster (verified PDF)",
+    "Project Management Short Course - supporting enrollment/course documents available; completion evidence pending",
+    "PLC and HMI from Scratch Specialization - Coursera; listed in CV, certificate file pending",
+    "Business Entrepreneurship - listed in CV, provider and certificate evidence pending"
+  ],
+  "documents": [
+    "Authoritative one-page resume",
+    "Authoritative four-page detailed CV",
+    "Project Portfolio / Report",
+    "Experience / Letter PDF",
+    "Project Management enrollment confirmation and course material"
+  ],
+  "academicContributions": [
+    "IEEE manuscript submitted: Design and Development of a Basic Health Monitoring Station.",
+    "Participated in Student Research Meet organised by Royal University of Bhutan (RUB).",
+    "Final Year Major Project work covering hardware design, embedded workflow, sensor calibration, GUI, data handling and QR report generation."
+  ],
+  "chatSuggestedPrompts": [
+    "Tell me about Arun's final year project.",
+    "What facility and HVAC experience does Arun have?",
+    "What PLC and SCADA skills does Arun have?",
+    "What leadership experience does Arun have?",
+    "Which certificates are verified?",
+    "Download Arun's new CV"
+  ],
+  "leadershipAchievements": [
+    "Class Representative for B.E. Year 1 and Year 2.",
+    "Public Address Councilor for college communication and events.",
+    "Winner of a college-level Business Idea Competition and CST representative at national level.",
+    "Founder of Zumthruel, a virtual reality gaming venture.",
+    "Contributor to Entrepreneur Club, GovTech Satellite Program, Vocational Club and Integrity Club."
+  ],
+  "references": [
+    "Deepan Sharma - CEO, Bhutan Automation and Engineering Limited",
+    "Ashika Chettri - Control Engineer, Bhutan Automation and Engineering Limited",
+    "Karma Kelzang Eudon - Faculty, College of Science and Technology",
+    "Mani Kumar Powdyel - Faculty Member, College of Science and Technology"
+  ]
 }

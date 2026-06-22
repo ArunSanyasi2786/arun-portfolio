@@ -49,6 +49,32 @@ function DamVisual() {
   );
 }
 
+function HvacVisual() {
+  return (
+    <g>
+      <rect x="72" y="82" width="212" height="240" rx="22" className="project-svg-panel" />
+      <circle cx="178" cy="202" r="66" fill="#0b0b0b" stroke={GOLD} strokeWidth="6" />
+      {[0, 90, 180, 270].map((angle) => (
+        <path key={angle} d="M178 190c26-42 51-30 44-5-6 22-26 28-44 17z" fill={angle % 180 ? PAPER : GOLD} opacity="0.92" transform={`rotate(${angle} 178 202)`} />
+      ))}
+      <circle cx="178" cy="202" r="13" fill={INK} stroke={PAPER} strokeWidth="4" />
+      <text x="178" y="297" textAnchor="middle" className="project-svg-label">SUPPLY FAN</text>
+
+      <path d="M284 141h121v-50h190v115h-74v112H405v-63H284" fill="none" stroke={PAPER} strokeWidth="18" strokeLinejoin="round" />
+      <path d="M302 141h95M421 91h155M521 225v76M421 255v47" className="project-svg-trace" />
+      <Node x="405" y="141" active label="TEMP" />
+      <Node x="595" y="91" label="AIRFLOW" />
+      <Node x="521" y="318" active label="ALARM" />
+
+      <rect x="405" y="162" width="116" height="73" rx="13" className="project-svg-screen" />
+      <text x="463" y="190" textAnchor="middle" className="project-svg-copy">VFD 42 Hz</text>
+      <path d="M425 214h19l9-18 12 31 13-25h23" className="project-svg-signal" />
+      <text x="405" y="363" className="project-svg-title">HVAC CONTROL</text>
+      <text x="405" y="388" className="project-svg-copy">COMFORT / AIRFLOW / ENERGY</text>
+    </g>
+  );
+}
+
 function ConveyorVisual() {
   return (
     <g>
@@ -155,6 +181,7 @@ function SensorVisual() {
 const visuals = {
   health: HealthVisual,
   dam: DamVisual,
+  hvac: HvacVisual,
   conveyor: ConveyorVisual,
   scada: ScadaVisual,
   accident: AccidentVisual,

@@ -13,7 +13,7 @@ export default function Resume() {
     <motion.section id="resume" initial="hidden" whileInView="visible" viewport={revealViewport} variants={staggerContainer} className="section-light relative px-4 py-24 sm:px-6 lg:px-8" aria-labelledby="resume-title">
       <div className="mx-auto max-w-6xl">
         <SectionHeading eyebrow="CV / Resume / Portfolio" title="Download Arun's application documents." align="center">
-          The primary button uses Arun's finalized one-page resume, with a detailed four-page CV and supporting project documents available in the same hub.
+          The primary button uses Arun's new one-page application resume. The authoritative four-page CV expands his hydropower, panel, ferro-industry, facility automation, projects and leadership evidence.
         </SectionHeading>
         <motion.div
           variants={scaleIn}
@@ -24,7 +24,7 @@ export default function Resume() {
           </div>
           <h3 id="resume-title" className="mt-6 text-center font-display text-2xl font-bold text-white">Application Document Hub</h3>
           <p className="mx-auto mt-3 max-w-2xl text-center text-sm leading-7 text-neutral-400">
-            Use the concise resume for job applications or the detailed CV when broader project and experience evidence is required.
+            Use the concise resume for targeted applications or the detailed CV when an employer needs broader technical, project, certification and leadership context.
           </p>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {documents.map((doc) => (

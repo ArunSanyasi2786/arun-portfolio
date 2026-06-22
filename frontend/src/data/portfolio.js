@@ -18,7 +18,7 @@ export const hero = {
   role: 'Instrumentation and Control Engineer',
   line: 'Industrial Automation | PLC | SCADA | DCS | Sensors | Raspberry Pi | ESP32',
   intro:
-    'Engineering graduate focused on PLC/SCADA systems, industrial instrumentation, electrical control systems, switchgear protection, drives, sensor networks and reliable plant automation.',
+    'Instrumentation and Control Engineering graduate with practical exposure to hydropower automation, PLC/SCADA commissioning, HT/LT panel assembly, facility automation and industrial electrical maintenance.',
   profileImage
 };
 
@@ -26,9 +26,19 @@ export const orbitTags = ['PLC', 'SCADA', 'DCS', 'HMI', 'Switchgear', 'Protectio
 
 export const aboutHighlights = [
   'Instrumentation and Control Engineering graduate from College of Science and Technology, Royal University of Bhutan.',
-  'Hands-on exposure to PLC/SCADA commissioning, hydropower automation, ferro-alloy plant electrical systems, switchyard operation, MCC panels and capacitor bank safety.',
-  'Project experience across biomedical instrumentation, PLC dam control, road-safety detection, handwritten bill digitization, material handling, conveyor logic and electrical analysis case studies.',
-  'Focused on practical engineering roles where automation, instrumentation, electrical troubleshooting and safe plant operation must work together.'
+  'Completed 12 weeks of hydropower automation, SCADA, commissioning and HT/LT panel work across Dagachhu field activities and Tala panel assembly support.',
+  'Industrial exposure covers ferro-alloy electrical systems, switchyard operation, protection schemes, MCCs, motor control, VFDs, capacitor banks and field instrumentation.',
+  'Project work spans biomedical instrumentation, HVAC automation, PLC dam control, road-safety detection, receipt digitization, conveyor logic and modern power-system case studies.',
+  'Combines practical engineering with operations coordination, safety awareness, technical reporting, leadership and service-focused problem solving.'
+];
+
+export const leadershipAchievements = [
+  { title: 'Class Representative', detail: 'Represented the B.E. cohort during Year 1 and Year 2, supporting communication and coordination.' },
+  { title: 'Public Address Councilor', detail: 'Supported college-wide communication, announcements and event coordination.' },
+  { title: 'Business Idea Competition Winner', detail: 'Won at college level and represented the College of Science and Technology at national level.' },
+  { title: 'Founder - Zumthruel', detail: 'Founded a virtual reality gaming venture, demonstrating initiative and entrepreneurship.' },
+  { title: 'Research and Technical Participation', detail: 'Participated in the RUB Student Research Meet and submitted an IEEE manuscript on the Basic Health Monitoring Station.' },
+  { title: 'Student Clubs and Service', detail: 'Contributed to Entrepreneur Club, GovTech Satellite Program, Vocational Club, Integrity Club and college events.' }
 ];
 
 export const education = [
@@ -45,7 +55,7 @@ export const education = [
     degree: 'Class XII - Higher Secondary Education',
     institution: 'Karmaling Higher Secondary School',
     location: 'Bhutan',
-    period: '2020 - 2021',
+    period: '2020 - 2022',
     result: '70.2%',
     focus: 'Science foundation with mathematics and applied technical interest.',
     highlights: ['STEM foundation', 'Engineering preparation']
@@ -149,27 +159,30 @@ export const courses = [
 ];
 
 export const technicalSkills = [
-  { title: 'PLC Programming', group: 'Automation', items: ['Ladder Logic', 'Interlocks', 'Auto/Manual Modes', 'PID Concepts'] },
-  { title: 'Siemens and Industrial PLC Tools', group: 'PLC Platforms', items: ['SICAM A8000', 'TIA Portal Concepts', 'CODESYS', 'Factory I/O'] },
+  { title: 'PLC Programming', group: 'Automation', items: ['Ladder Logic', 'Structured Text', 'Interlocks', 'PID Control', 'Remote/Local Modes'] },
+  { title: 'Siemens and Industrial PLC Tools', group: 'PLC Platforms', items: ['SICAM A8000', 'S7-1200', 'TIA Portal', 'CODESYS', 'Factory I/O', 'FluidSIM'] },
   { title: 'SCADA and HMI Systems', group: 'Visualization', items: ['SCALA 250', 'WinCC Concepts', 'Alarm Views', 'Operator Dashboards'] },
   { title: 'DCS and Process Control', group: 'Control', items: ['Loop Control', 'SISO/MIMO', 'Controller Tuning', 'Final Control Elements'] },
-  { title: 'Electrical Control Systems', group: 'Electrical', items: ['MCCs', 'Control Wiring', 'Starters', 'Panel Troubleshooting'] },
-  { title: 'Switchgear and Protection', group: 'Power Systems', items: ['Relays', 'Breakers', 'Busbar Protection', 'Fault Isolation'] },
-  { title: 'Industrial Drives and VFDs', group: 'Drives', items: ['VFD Wiring', 'Motor Control', 'Speed Control', 'Drive Faults'] },
-  { title: 'Instrumentation', group: 'Field Devices', items: ['Sensors', 'Transducers', 'Signal Tracing', 'Calibration Awareness'] },
+  { title: 'Electrical Panels and Systems', group: 'Electrical', items: ['HT/LT Panels', 'MCCs', 'ACB/MCCB', 'Busbars', 'Control Wiring', '33kV/11kV Exposure'] },
+  { title: 'Switchgear and Protection', group: 'Power Systems', items: ['Differential Protection', 'Overcurrent', 'Earth Fault / REF', 'SIPROTEC', 'ABB Relion', 'GE Multilin'] },
+  { title: 'Industrial Drives and Motor Control', group: 'Drives', items: ['DOL / Star-Delta', 'Forward-Reverse', 'Soft Starters', 'VFD Operation', 'Drive Faults'] },
+  { title: 'Instrumentation', group: 'Field Devices', items: ['RTDs', 'Thermocouples', 'Flow Monitors', 'Pressure Transmitters', 'Signal Tracing'] },
   { title: 'Industrial Communication', group: 'Networks', items: ['Modbus', 'PROFINET', 'PROFIBUS', 'IP Configuration'] },
   { title: 'Biomedical Sensors', group: 'Measurement', items: ['SpO2/Pulse', 'Temperature', 'BMI Workflow', 'Patient Monitoring'] },
-  { title: 'Engineering Software', group: 'Tools', items: ['EPLAN Electric P8', 'AutoCAD Basics', 'Proteus', 'MS Office'] },
-  { title: 'Python and Interface Basics', group: 'Software', items: ['PyQt6 GUI', 'SQLite', 'QR Reports', 'Testing Basics'] },
+  { title: 'Facility Automation', group: 'Operations', items: ['HVAC Control', 'CCTV Connectivity', 'Sensors and Alarms', 'Equipment Checks', 'Maintenance Records'] },
+  { title: 'Engineering Design Software', group: 'Tools', items: ['EPLAN Electric P8', 'AutoCAD Electrical', 'Proteus', 'SolidWorks', 'Fusion 360'] },
+  { title: 'Programming and Interfaces', group: 'Software', items: ['Python', 'PyQt6 GUI', 'C', 'C++', 'Arduino IDE', 'SQLite'] },
   { title: 'Embedded Systems', group: 'Prototyping', items: ['ESP32', 'Raspberry Pi', 'Sensor Integration', 'Serial Communication'] }
 ];
 
 export const softSkills = [
   { title: 'Troubleshooting Discipline', items: ['Checks symptoms carefully', 'Verifies wiring and readings', 'Documents root causes'] },
   { title: 'Technical Reporting', items: ['Clear logs', 'Maintenance notes', 'Project documentation'] },
-  { title: 'Team Communication', items: ['Coordinates with engineers', 'Asks for feedback', 'Shares progress clearly'] },
+  { title: 'Operations Coordination', items: ['Follows up tasks', 'Supports supervision', 'Keeps stakeholders informed'] },
+  { title: 'Team Communication', items: ['Coordinates with engineers', 'Supports technicians', 'Shares progress clearly'] },
   { title: 'Safety Awareness', items: ['PPE mindset', 'Shutdown/startup care', 'Hazard identification'] },
   { title: 'Learning Agility', items: ['Adapts to new tools', 'Uses notes and manuals', 'Improves through practice'] },
+  { title: 'Service Orientation', items: ['Prioritizes reliability', 'Responds calmly', 'Supports operational continuity'] },
   { title: 'Attention to Detail', items: ['Checks PLC logic', 'Reviews drawings', 'Validates sensor data'] }
 ];
 
@@ -201,6 +214,20 @@ export const projects = [
     details: ['Modeled safe level monitoring with alarm and decision logic.', 'Applied gate-control thinking for inlet/outlet/flushing workflows.', 'Connected control logic to operator visibility through HMI/SCADA concepts.'],
     impact: 'Aligned instrumentation logic with safer dam level management and operator visibility.',
     relevance: 'Applies PLC sequencing, interlocks, PID concepts and SCADA visibility to a hydropower control problem.'
+  },
+  {
+    title: 'HVAC System Automation and Control',
+    subtitle: 'Facility Automation Concept',
+    category: 'HVAC / Building Systems',
+    visual: 'hvac',
+    gallery: [],
+    objective: 'Develop a facility-control concept for temperature, airflow, fan operation, VFD control, sensing and alarm management.',
+    description:
+      'HVAC automation concept covering temperature and airflow monitoring, fan/VFD operation, sensors, alarms, comfort, energy awareness and safe facility operation.',
+    technologies: ['HVAC Control', 'Temperature Sensors', 'Airflow Monitoring', 'VFD', 'Alarms', 'Facility Operations'],
+    details: ['Defined sensor, fan and VFD interactions for comfort-focused control.', 'Mapped alarms and operating states for maintenance and facility support.', 'Connected instrumentation principles to reliability, safety and energy awareness.'],
+    impact: 'Established a practical control approach for maintaining comfortable and reliable facility conditions.',
+    relevance: 'Demonstrates direct role fit for facility automation, HVAC controls, operations support and preventive maintenance coordination.'
   },
   {
     title: 'Material Handling and Conveyor Automation',
@@ -291,30 +318,30 @@ export const projects = [
 export const experiences = [
   {
     role: 'Graduate Engineer Trainee - Automation and Commissioning',
-    company: 'Bhutan Automation and Engineering Limited, Dagachhu Hydropower Plant',
-    period: '83 days',
+    company: 'Bhutan Automation and Engineering Limited - Dagachhu Hydropower Project / Tala Panel Works',
+    period: '12 weeks',
     tag: 'Hydropower Automation',
     points: [
-      'Developed ladder-logic control for inlet, outlet and flushing gates on Siemens SICAM A8000.',
-      'Built SCALA 250 SCADA/HMI screens for status, alarms and gate visualization.',
-      'Performed point-to-point I/O checks, loop checks and EPLAN-based wiring validation.'
+      'Developed inlet, outlet and flushing-gate logic with manual, automatic, remote and local operating modes on Siemens SICAM A8000.',
+      'Built SCALA 250 SCADA screens, mapped signals and supported testing, field verification and commissioning.',
+      'Contributed to HT/LT panel assembly with ACB/MCCB installation, internal wiring, busbars, controller cards and final inspection support.'
     ],
-    details: ['Supported desilter and dam-control automation work.', 'Worked around PLC logic, HMI/SCADA visualization, gate operation modes, interlocks and alarm thinking.', 'Gained commissioning discipline through I/O verification, field wiring review and drawing-based checks.'],
-    tools: ['SICAM A8000', 'SCALA 250', 'EPLAN Electric P8', 'PLC/SCADA', 'Loop Checks'],
+    details: ['Completed 12-week OJT under projects associated with Druk Green Power Corporation.', 'Interpreted EPLAN schematics for signal tracing, ferruling, labelling and wiring verification.', 'Applied interlocks, safety conditions and sequencing while following wiring discipline, clearances and site safety procedures.'],
+    tools: ['SICAM A8000', 'SCALA 250', 'EPLAN Electric P8', 'HT/LT Panels', 'ACB/MCCB', 'Busbars'],
     documents: [{ label: 'Experience Letter', href: 'files/arun-experience-letter.pdf' }]
   },
   {
     role: 'Instrumentation and Electrical Automation Intern',
     company: 'Druk Wang Alloys Limited (DWAL)',
-    period: 'Dec 2024 - Jan 2025',
+    period: '06 Dec 2024 - 03 Jan 2025',
     tag: 'Ferro Industry Exposure',
     points: [
-      'Traced field signals from sensors to control panels across process areas, MCCs and 33kV/11kV systems.',
-      'Observed switchyard operations, switchgear/protection relay practices and capacitor bank systems.',
-      'Reviewed motor-control wiring, preventive maintenance and CMMS-style maintenance records.'
+      'Gained exposure to switchyard, two 18 MVA furnace systems, HT/LT substations, RMHS, PLC, GCP, MCC, hydraulics and pumphouse systems.',
+      'Reviewed transformer protection including differential, overcurrent, undervoltage, overvoltage, earth fault and restricted earth fault.',
+      'Studied DOL, Star-Delta and Forward-Reverse control wiring, soft starters, VFDs and field instrumentation.'
     ],
-    details: ['Built a stronger hold in ferro-industry electrical systems and plant maintenance practices.', 'Observed switchyard equipment, capacitor banks, capacitor discharge safety and protection practices.', 'Learned how field devices, MCCs and motor-control wiring affect production reliability.'],
-    tools: ['Switchyard', 'MCC', 'Motor Control Wiring', 'Capacitor Bank', 'Protection Relays'],
+    details: ['Completed one-month internship under the Electrical Department.', 'Worked around RTDs, thermocouples, flow monitors, pressure transmitters and sensor-to-panel signal paths.', 'Assisted maintenance activities and learned how electrical, automation and instrumentation systems support heavy-industry production.'],
+    tools: ['Switchyard', '18 MVA Furnaces', 'MCC', 'Protection Relays', 'Motor Control', 'VFDs'],
     documents: [{ label: 'Recommendation Placeholder', href: 'files/recommendation-letter-placeholder.pdf' }]
   },
   {
@@ -325,16 +352,16 @@ export const experiences = [
     points: [
       'Supported an app for detecting handwritten bills and receipts and storing them as structured digital records.',
       'Helped test capture-to-storage workflows, detection review and searchable archiving.',
-      'Worked on device configuration, networking basics and troubleshooting.'
+      'Assisted hotel CCTV connectivity, device checks and basic network troubleshooting for surveillance readiness.'
     ],
-    details: ['Learned practical configuration and troubleshooting in a software-enabled automation environment.', 'Supported digitization workflow checks for handwritten bills and receipts.', 'Strengthened networking basics, record handling and deployment support mindset.'],
-    tools: ['Workflow Testing', 'Networking', 'Configuration', 'Troubleshooting', 'Digital Records'],
+    details: ['Supported source-image handling, detection review, structured storage and searchable record keeping.', 'Learned practical configuration and troubleshooting in a software-enabled automation environment.', 'Supported equipment checks, task reporting and service-focused follow-up for reliable daily operations.'],
+    tools: ['Workflow Testing', 'CCTV Connectivity', 'Networking', 'Troubleshooting', 'Digital Records'],
     documents: [{ label: 'Project Report Placeholder', href: 'files/project-report-placeholder.pdf' }]
   }
 ];
 
 export const certifications = [
-  { title: 'Management Leadership', issuer: 'Saylor Academy', date: 'June 2026', focus: 'Management leadership fundamentals and structured organizational decision-making.', file: 'files/certificates/management-leadership.pdf', verified: true },
+  { title: 'BUS401: Management Leadership', issuer: 'Saylor Academy', date: 'June 2026', focus: 'Completed 37 hours with a reported grade of 92.31%, covering leadership and structured organizational decision-making.', file: 'files/certificates/management-leadership.pdf', verified: true },
   { title: 'Principles of Management', issuer: 'Mindluster', date: 'June 2026', focus: 'Management principles, organizational practice and professional coordination.', file: 'files/certificates/principles-of-management.pdf', verified: true },
   { title: 'Electric Motor Control Systems', issuer: 'Mindluster', date: 'June 2026', focus: 'Motor-control system fundamentals relevant to drives, panels and industrial maintenance.', file: 'files/certificates/electric-motor-control-systems.pdf', verified: true },
   { title: 'SCADA Software System Basics', issuer: 'Mindluster', date: 'June 2026', focus: 'Foundational SCADA software concepts for industrial monitoring and operator interfaces.', file: 'files/certificates/scada-software-system-basics.pdf', verified: true },
@@ -348,9 +375,14 @@ export const supportingLearningDocuments = [
   { title: 'Project Management - Course Material', issuer: 'Brentwood Open Learning College', status: 'Learning resource', file: 'files/training/project-management-course-material.pdf' }
 ];
 
+export const cvListedTraining = [
+  { title: 'PLC and HMI from Scratch Specialization', issuer: 'Coursera', status: 'Listed in new CV - certificate file not uploaded' },
+  { title: 'Business Entrepreneurship', issuer: 'Provider requires confirmation', status: 'Listed in new CV - manual review required' }
+];
+
 export const documents = [
-  { title: 'Download CV', eyebrow: 'Resume', description: 'One-page Arun Sanyasi resume uploaded for job applications.', href: 'files/arun-cv.pdf', primary: true },
-  { title: 'Download Detailed CV', eyebrow: 'Extended CV', description: 'Four-page engineering CV with expanded experience, projects, skills and education.', href: 'files/arun-detailed-cv.pdf' },
+  { title: 'Download New Resume', eyebrow: 'Authoritative Resume', description: 'Updated one-page resume covering engineering operations, PLC/SCADA, facility automation, leadership and verified training.', href: 'files/arun-cv.pdf', primary: true },
+  { title: 'Download New Detailed CV', eyebrow: 'Authoritative CV', description: 'Updated four-page CV with expanded hydropower, panel assembly, protection, HVAC, leadership and career-fit evidence.', href: 'files/arun-detailed-cv.pdf' },
   { title: 'Download Portfolio PDF', eyebrow: 'Portfolio', description: 'Placeholder portfolio PDF ready for replacement with the final combined portfolio.', href: 'files/arun-portfolio.pdf' },
   { title: 'Project Portfolio / Report', eyebrow: 'Project Evidence', description: 'Existing Arun project portfolio PDF with electronics, PLC/SCADA and electrical analysis highlights.', href: 'files/arun-project-portfolio.pdf' },
   { title: 'Experience / Letter PDF', eyebrow: 'Document', description: 'Uploaded scanned letter/experience document for reference.', href: 'files/arun-experience-letter.pdf' },
@@ -360,6 +392,6 @@ export const documents = [
 export const stats = [
   { label: 'Major Project', value: 'BHMS', detail: 'Biomedical kiosk and QR reports' },
   { label: 'Industrial Exposure', value: 'DWAL', detail: 'Ferro alloy plant systems' },
-  { label: 'Hydropower Training', value: '83d', detail: 'Automation commissioning' },
+  { label: 'Hydropower Training', value: '12w', detail: 'Automation, panels and commissioning' },
   { label: 'Courses', value: '12+', detail: 'Control, drives, networks and protection' }
 ];

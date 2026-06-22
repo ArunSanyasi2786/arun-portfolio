@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { CircuitBoard, Gauge, GraduationCap, ShieldCheck, Zap } from 'lucide-react';
+import { BookOpen, CircuitBoard, Gauge, GraduationCap, Megaphone, Rocket, ShieldCheck, Trophy, Users, Zap } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading.jsx';
-import { aboutHighlights, education } from '../data/portfolio.js';
+import { aboutHighlights, education, leadershipAchievements } from '../data/portfolio.js';
 import { fadeUp, revealViewport, staggerContainer } from '../utils/motion.js';
 
 const pillars = [
@@ -10,6 +10,8 @@ const pillars = [
   { icon: Zap, title: 'Electrical Control Depth', text: 'Switchgear, MCCs, motor-control wiring, capacitor banks, VFDs and protection awareness.' },
   { icon: ShieldCheck, title: 'Industrial Discipline', text: 'Safety, shutdown/startup awareness, documentation, maintenance follow-up and troubleshooting.' }
 ];
+
+const leadershipIcons = [Users, Megaphone, Trophy, Rocket, BookOpen, ShieldCheck];
 
 export default function About() {
   return (
@@ -95,6 +97,29 @@ export default function About() {
                 </div>
               </motion.article>
             ))}
+          </div>
+        </motion.div>
+        <motion.div variants={fadeUp} className="mt-8 overflow-hidden rounded-[2rem] border border-neutral-200 bg-neutral-950 p-6 shadow-[0_24px_70px_rgba(0,0,0,0.14)] sm:p-8">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-amber-300">Leadership and Initiative</p>
+              <h3 className="mt-2 font-display text-2xl font-bold !text-white">Evidence beyond technical coursework</h3>
+            </div>
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-300/25 bg-amber-300/10 px-4 py-2 text-xs font-bold !text-amber-100">
+              <Trophy className="h-4 w-4" /> New CV verified profile
+            </span>
+          </div>
+          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {leadershipAchievements.map((item, index) => {
+              const Icon = leadershipIcons[index] || Trophy;
+              return (
+                <motion.article key={item.title} variants={fadeUp} whileHover={{ y: -6 }} className="rounded-3xl border border-white/10 bg-white/[0.055] p-5 transition hover:border-amber-300/35 hover:bg-amber-300/[0.07]">
+                  <Icon className="h-6 w-6 text-amber-300" />
+                  <h4 className="mt-4 font-display text-lg font-bold !text-white">{item.title}</h4>
+                  <p className="mt-2 text-sm leading-7 !text-neutral-300">{item.detail}</p>
+                </motion.article>
+              );
+            })}
           </div>
         </motion.div>
       </div>

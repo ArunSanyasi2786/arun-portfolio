@@ -8,8 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "backend" / "knowledge" / "source-scan-summary.json"
 
 SOURCE_FILES = [
-    Path(r"C:\Users\sanya\Documents\New project\arun_resume_professional_main\qa_text.txt"),
-    Path(r"C:\Users\sanya\Desktop\Desktop Organized - 2026-06-07\ARUN SANYASI.txt"),
+    ROOT / "frontend" / "src" / "data" / "arun-profile.json",
+    ROOT / "frontend" / "src" / "data" / "portfolio.js",
 ]
 
 KEYWORDS = [
@@ -22,10 +22,13 @@ KEYWORDS = [
     "Druk Wang Alloys",
     "Fuzzy Automation",
     "Basic Health Monitoring",
+    "HVAC",
+    "Leadership",
+    "Student Research Meet",
+    "IEEE manuscript",
     "ESP32",
     "Raspberry Pi",
     "MAX30102",
-    "Student Research Meet",
     "Electrical Testing",
     "VFD"
 ]

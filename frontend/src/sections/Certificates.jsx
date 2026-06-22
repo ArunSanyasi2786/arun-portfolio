@@ -1,8 +1,8 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { Award, BadgeCheck, BookOpen, Download, ExternalLink, FileCheck2, X } from 'lucide-react';
+import { Award, BadgeCheck, BookOpen, CircleAlert, Download, ExternalLink, FileCheck2, X } from 'lucide-react';
 import { useState } from 'react';
 import SectionHeading from '../components/SectionHeading.jsx';
-import { certifications, supportingLearningDocuments } from '../data/portfolio.js';
+import { certifications, cvListedTraining, supportingLearningDocuments } from '../data/portfolio.js';
 import { fadeUp, revealViewport, scaleIn, staggerContainer } from '../utils/motion.js';
 
 function withBase(href) {
@@ -37,7 +37,7 @@ function CertificateModal({ certificate, onClose }) {
             <div>
               <p className="font-mono text-xs font-bold uppercase tracking-[0.24em] text-amber-300">Verified credential</p>
               <h3 className="mt-2 font-display text-2xl font-bold text-white sm:text-3xl">{certificate.title}</h3>
-              <p className="mt-2 text-sm text-neutral-400">{certificate.issuer} Â· {certificate.date}</p>
+              <p className="mt-2 text-sm text-neutral-400">{certificate.issuer} / {certificate.date}</p>
             </div>
             <button type="button" onClick={onClose} className="rounded-full border border-amber-300/20 p-2 text-neutral-300 transition hover:bg-amber-300/10 hover:text-white" aria-label="Close certificate"><X className="h-5 w-5" /></button>
           </div>
@@ -117,6 +117,26 @@ export default function Certificates() {
                 <FileCheck2 className="h-5 w-5 flex-none text-amber-700 transition group-hover:scale-110" />
               </a>
             ))}
+          </div>
+          <div className="mt-8 border-t border-neutral-300 pt-7">
+            <div className="flex items-start gap-3">
+              <CircleAlert className="mt-0.5 h-5 w-5 flex-none text-amber-700" />
+              <div>
+                <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-amber-700">Manual evidence review</p>
+                <h4 className="mt-1 font-display text-lg font-bold text-neutral-950">Training listed in the new CV without an uploaded certificate</h4>
+                <p className="mt-2 text-sm leading-6 text-neutral-600">These entries are included for completeness but are not counted as verified credentials and do not have download buttons.</p>
+              </div>
+            </div>
+            <div className="mt-5 grid gap-4 md:grid-cols-2">
+              {cvListedTraining.map((item) => (
+                <div key={item.title} className="rounded-2xl border border-dashed border-amber-500/40 bg-amber-50 p-5">
+                  <span className="inline-flex rounded-full bg-amber-200 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-amber-900">Evidence pending</span>
+                  <p className="mt-3 font-display font-bold text-neutral-950">{item.title}</p>
+                  <p className="mt-1 text-xs font-semibold text-neutral-500">{item.issuer}</p>
+                  <p className="mt-3 text-xs leading-5 text-neutral-600">{item.status}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>

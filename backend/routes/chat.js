@@ -30,7 +30,7 @@ function localAnswer(question = '') {
   }
 
   if (q.includes('cv') || q.includes('resume') || q.includes('download')) {
-    return 'Use the CV / Resume / Portfolio section. The Download CV button opens Arun\'s uploaded resume PDF, and the same section also has portfolio, project report, experience letter and recommendation placeholder downloads.';
+    return 'Use the CV / Resume / Portfolio section to download Arun\'s new one-page application resume or his authoritative four-page detailed CV. Supporting project and experience documents are available in the same document hub.';
   }
 
   if (q.includes('education') || q.includes('college') || q.includes('graduate')) {
@@ -39,7 +39,7 @@ function localAnswer(question = '') {
   }
 
   if (q.includes('scada') || q.includes('hmi')) {
-    return 'Arun has SCADA/HMI exposure from Bhutan Automation at Dagachhu Hydropower Plant, where he built SCALA 250 screens for equipment status, alarms and gate visualization. He also has TIA Portal, WinCC and HMI learning exposure.';
+    return 'During a 12-week OJT with Bhutan Automation and Engineering Limited, Arun worked with SICAM A8000 I/O, SCALA 250 SCADA/HMI screens, gate-control modes, interlocks and field verification at Dagachhu, plus HT/LT panel assembly and inspection support for Tala. He also has WinCC and TIA Portal learning exposure.';
   }
 
   if (q.includes('plc') || q.includes('ladder') || q.includes('tia')) {
@@ -52,6 +52,18 @@ function localAnswer(question = '') {
 
   if (q.includes('sensor') || q.includes('max30102') || q.includes('biomedical')) {
     return 'Arun has worked with biomedical and industrial sensing through the Basic Health Monitoring Station and instrumentation coursework: pulse/SpO2 sensing, temperature sensing, height/weight measurement, sensor validation, PyQt6 interface workflow, SQLite storage and QR report generation.';
+  }
+
+  if (q.includes('hvac') || q.includes('facility') || q.includes('cctv')) {
+    return 'Arun prepared an HVAC automation and control concept covering temperature and airflow monitoring, fan/VFD operation, sensors, alarms, comfort, energy awareness and safe facility operation. At Fuzzy Automation he also supported hotel CCTV connectivity, device checks, basic networking, troubleshooting, service follow-up and task reporting.';
+  }
+
+  if (q.includes('leadership') || q.includes('achievement') || q.includes('entrepreneur') || q.includes('zumthruel')) {
+    return `Arun's leadership and initiative include:\n${bullet(knowledge.leadershipAchievements)}`;
+  }
+
+  if (q.includes('reference') || q.includes('referee')) {
+    return `Arun's CV lists these professional references:\n${bullet(knowledge.references)}`;
   }
 
   if (q.includes('final') || q.includes('health') || q.includes('project')) {
@@ -68,14 +80,14 @@ function localAnswer(question = '') {
   }
 
   if (q.includes('automation') || q.includes('suitable') || q.includes('role')) {
-    return 'Arun is suitable for entry-level industrial automation, instrumentation, commissioning support, control systems and electrical maintenance roles because he has PLC/SCADA exposure, hydropower commissioning work, ferro-industry maintenance exposure, sensors, field signal tracing, embedded systems and documentation discipline.';
+    return 'Arun is suitable for entry-level industrial automation, instrumentation, commissioning, facility automation and electrical maintenance-support roles because he combines PLC/SCADA exposure, hydropower field and panel work, ferro-industry electrical maintenance, HVAC/control concepts, field signal tracing, sensors and disciplined technical reporting.';
   }
 
   if (q.includes('skill')) {
     return `Arun's skills include:\n${skillText()}`;
   }
 
-  return `${knowledge.name} is an Instrumentation and Control Engineering graduate focused on PLC, SCADA, DCS concepts, industrial automation, electrical control systems, instrumentation, switchgear/protection, industrial networking, sensors and project development. Ask about his projects, courses, SCADA, PLC, sensors, education or experience.`;
+  return `${knowledge.name} is an Instrumentation and Control Engineering graduate focused on PLC, SCADA, DCS concepts, industrial and facility automation, electrical control systems, instrumentation, switchgear/protection, sensors and project development. Ask about his projects, courses, experience, leadership, verified certificates, references or new CV.`;
 }
 
 function compactProfile() {
@@ -91,7 +103,9 @@ function compactProfile() {
     courses: knowledge.courses,
     weaknessStatement: knowledge.weaknessStatement,
     positiveProfile: knowledge.positiveProfile,
-    academicContributions: knowledge.academicContributions
+    academicContributions: knowledge.academicContributions,
+    leadershipAchievements: knowledge.leadershipAchievements,
+    references: knowledge.references
   });
 }
 

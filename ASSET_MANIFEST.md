@@ -24,14 +24,14 @@ This file lists every image copied or generated for the portfolio website, with 
 | `frontend/src/assets/projects/extracted-group-3-manual-basic-health-monitoring-station-03.webp` | used | `C:\Users\sanya\Documents\New project\cst_health_kiosk\project_documents\manual\Group_3_MANUAL_Basic_health_Monitoring_Station.docx` | Extracted embedded image from Group_3_MANUAL_Basic_health_Monitoring_Station.docx; original dimensions 1494x1212. |
 | `frontend/src/assets/projects/final-report-preview.webp` | used | `C:\Users\sanya\Documents\New project\cst_health_kiosk\project_documents\final_report\Group_3_Basic_Health_Monitoring_Station.pdf` | Rendered first page of final report PDF as a portfolio preview. |
 | `frontend/src/assets/projects/ai-generated/*.webp` | retained / unused | Previously generated portfolio artwork. | Kept in the repository to preserve existing assets, but no longer rendered in project cards. |
-| `frontend/src/components/ProjectIllustration.jsx` | used | Original code-generated SVG illustration system. | Supplies eight consistent black/white/gold engineering visuals without external or copyrighted imagery. |
+| `frontend/src/components/ProjectIllustration.jsx` | used | Original code-generated SVG illustration system. | Supplies nine consistent black/white/gold engineering visuals, including HVAC automation, without external or copyrighted imagery. |
 
 ## Downloadable Documents
 
 | Output | Status | Source | Reason |
 | --- | --- | --- | --- |
-| `frontend/public/files/arun-cv.pdf` | used | `C:\Users\sanya\Downloads\Finalized Resume.pdf` | Finalized one-page application resume. |
-| `frontend/public/files/arun-detailed-cv.pdf` | used | `C:\Users\sanya\Downloads\CV .pdf` | Four-page detailed CV with expanded experience, projects, skills and education. |
+| `frontend/public/files/arun-cv.pdf` | used | `C:\Users\sanya\Downloads\Entry_Level_Resume_Template__LaTeX_ (8).pdf` | New authoritative one-page application resume supplied on 22 June 2026. |
+| `frontend/public/files/arun-detailed-cv.pdf` | used | `C:\Users\sanya\Downloads\Entry_Level_Resume_Template__LaTeX_ (7).pdf` | New authoritative four-page CV with expanded experience, projects, skills, certifications and leadership. |
 | `frontend/public/files/arun-project-portfolio.pdf` | used | `C:\Users\sanya\Documents\New project\arun_cv_final_application\Arun_Sanyasi_Project_Portfolio.pdf` | Project portfolio/report companion PDF for the portfolio website. |
 | `frontend/public/files/arun-experience-letter.pdf` | used | `C:\Users\sanya\Downloads\completion-letter (1).pdf` | Scanned letter/experience document requested for website download access. |
 | `frontend/public/files/arun-portfolio.pdf` | placeholder | Generated locally with ReportLab. | Temporary portfolio PDF so the portfolio download works until the final combined PDF is ready. |
