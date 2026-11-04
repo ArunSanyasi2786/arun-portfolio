@@ -2,23 +2,29 @@
 @use '../../styles/mixins' as *;
 
 .work {
-  background: $ink;
-  color: $warm-paper;
+  position: relative;
+  background: $bg-elevated;
+  color: $text-primary;
   padding: $section-pad 0;
+  @include noise-bg;
   @include respond-to(tablet) { padding: $section-pad-mobile 0; }
 }
 
-.inner { @include container; }
+.inner {
+  @include container;
+  position: relative;
+  z-index: 1;
+}
 
 .chapter {
   @include label-text;
-  color: rgba($warm-paper, 0.4);
+  color: $vermilion;
   margin-bottom: 16px;
 }
 
 .title {
   @include heading-lg;
-  color: $warm-paper;
+  color: $text-primary;
   margin-bottom: 8px;
 
   .exp { @include expressive; color: $vermilion; }
@@ -27,14 +33,14 @@
 .subtitle {
   font-family: $font-mono;
   font-size: 14px;
-  color: $muted-stone;
+  color: $text-muted;
   margin-bottom: 60px;
 }
 
 .featured {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 32px;
   margin-bottom: 80px;
 }
 
@@ -44,12 +50,9 @@
   gap: 48px;
   align-items: center;
   padding: 40px;
-  border-radius: 8px;
-  background: rgba($warm-paper, 0.04);
-  border: 1px solid rgba($warm-paper, 0.08);
-  transition: border-color $duration-normal $ease-out;
-
-  &:hover { border-color: rgba($vermilion, 0.3); }
+  border-radius: 16px;
+  @include glass-card;
+  @include glow-on-hover;
 
   @include respond-to(tablet) {
     grid-template-columns: 1fr;
@@ -59,16 +62,21 @@
 }
 
 .projectImage {
-  border-radius: 6px;
+  border-radius: 10px;
   overflow: hidden;
   aspect-ratio: 16 / 10;
   position: relative;
-  background: rgba($warm-paper, 0.05);
+  background: rgba(255, 255, 255, 0.03);
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.6s $ease-out;
+  }
+
+  .projectCard:hover & img {
+    transform: scale(1.03);
   }
 }
 
@@ -82,8 +90,8 @@
 
   h3 {
     font-size: clamp(22px, 2.5vw, 32px);
-    font-weight: 600;
-    color: $warm-paper;
+    font-weight: 700;
+    color: $text-primary;
     margin-bottom: 16px;
     line-height: 1.2;
   }
@@ -91,7 +99,7 @@
   p {
     @include body-text;
     font-size: 16px;
-    color: rgba($warm-paper, 0.7);
+    color: $text-secondary;
     margin-bottom: 20px;
   }
 }
@@ -106,29 +114,30 @@
 .tag {
   font-family: $font-mono;
   font-size: 12px;
-  padding: 4px 12px;
-  border-radius: 20px;
-  background: rgba($warm-paper, 0.08);
-  color: rgba($warm-paper, 0.6);
+  padding: 5px 14px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  color: $text-secondary;
+  border: 1px solid $border-subtle;
 }
 
 .projectLink {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
   color: $vermilion;
   transition: gap $duration-fast $ease-out;
 
-  &:hover { gap: 12px; }
+  &:hover { gap: 14px; }
 }
 
 .otherProjects {
   h3 {
     @include heading-md;
     font-size: 24px;
-    color: $warm-paper;
+    color: $text-primary;
     margin-bottom: 32px;
   }
 }
@@ -136,18 +145,16 @@
 .smallGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 16px;
 }
 
 .smallCard {
+  @include glass-card;
   padding: 28px;
-  border: 1px solid rgba($warm-paper, 0.1);
-  border-radius: 6px;
-  transition: border-color $duration-fast $ease-out, transform $duration-fast $ease-out;
 
   &:hover {
-    border-color: rgba($vermilion, 0.3);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    border-color: rgba($vermilion, 0.2);
   }
 
   .category {
@@ -160,32 +167,32 @@
   h4 {
     font-size: 18px;
     font-weight: 600;
-    color: $warm-paper;
+    color: $text-primary;
     margin-bottom: 8px;
   }
 
   p {
     font-size: 14px;
-    color: rgba($warm-paper, 0.6);
-    line-height: 1.5;
+    color: $text-secondary;
+    line-height: 1.6;
   }
 }
 
 .skills {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 .skillsTitle {
   @include heading-md;
   font-size: 24px;
-  color: $warm-paper;
-  margin-bottom: 32px;
+  color: $text-primary;
+  margin-bottom: 40px;
 }
 
 .skillGroups {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 32px;
+  gap: 40px;
 }
 
 .skillGroup {
@@ -205,11 +212,16 @@
   .skill {
     font-size: 13px;
     padding: 6px 14px;
-    border-radius: 4px;
-    background: rgba($warm-paper, 0.06);
-    color: rgba($warm-paper, 0.7);
-    transition: background $duration-fast;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    color: $text-secondary;
+    border: 1px solid $border-subtle;
+    transition: background $duration-fast, border-color $duration-fast, color $duration-fast;
 
-    &:hover { background: rgba($warm-paper, 0.12); }
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: $border-hover;
+      color: $text-primary;
+    }
   }
 }

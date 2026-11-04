@@ -2,35 +2,39 @@
 @use '../../styles/mixins' as *;
 
 .contact {
-  background: $vermilion;
+  position: relative;
+  background: $bg-elevated;
   padding: $section-pad 0;
+  @include noise-bg;
   @include respond-to(tablet) { padding: $section-pad-mobile 0; }
 }
 
 .inner {
   @include container;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .chapter {
   @include label-text;
-  color: rgba($ink, 0.4);
+  color: $vermilion;
   margin-bottom: 16px;
 }
 
 .title {
   @include heading-lg;
-  color: $ink;
+  color: $text-primary;
   margin-bottom: 16px;
 
-  .exp { @include expressive; color: $deep-oxblood; }
+  .exp { @include expressive; color: $vermilion; }
 }
 
 .subtitle {
   @include body-text;
-  color: rgba($ink, 0.7);
+  color: $text-secondary;
   max-width: 560px;
-  margin: 0 auto 48px;
+  margin: 0 auto 56px;
 }
 
 .grid {
@@ -38,7 +42,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   text-align: left;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 
   @include respond-to(tablet) {
@@ -51,44 +55,47 @@
   h3 {
     font-size: 20px;
     font-weight: 600;
-    color: $ink;
-    margin-bottom: 24px;
+    color: $text-primary;
+    margin-bottom: 28px;
   }
 }
 
 .contactItem {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-  color: rgba($ink, 0.8);
+  gap: 14px;
+  margin-bottom: 18px;
+  color: $text-secondary;
   font-size: 16px;
 
   .icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    background: rgba($ink, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid $border-subtle;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
+    font-family: $font-mono;
     flex-shrink: 0;
+    color: $vermilion;
   }
 
   a {
     transition: color $duration-fast;
-    &:hover { color: $ink; }
+    &:hover { color: $text-primary; }
   }
 }
 
 .socials {
-  margin-top: 32px;
+  margin-top: 36px;
 
   h4 {
     @include label-text;
     font-size: 11px;
-    color: rgba($ink, 0.5);
+    color: $text-muted;
     margin-bottom: 16px;
   }
 }
@@ -102,18 +109,22 @@
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  background: $ink;
-  color: $warm-paper;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid $border-subtle;
+  color: $text-secondary;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
-  transition: transform $duration-fast $ease-out, box-shadow $duration-fast;
+  font-family: $font-mono;
+  transition: transform $duration-fast $ease-out, border-color $duration-fast, color $duration-fast, background $duration-fast;
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 16px rgba($ink, 0.3);
+    border-color: $vermilion;
+    color: $vermilion;
+    background: rgba($vermilion, 0.08);
   }
 }
 
@@ -121,8 +132,8 @@
   h3 {
     font-size: 20px;
     font-weight: 600;
-    color: $ink;
-    margin-bottom: 24px;
+    color: $text-primary;
+    margin-bottom: 28px;
   }
 }
 
@@ -134,20 +145,20 @@
 
 .input, .textarea {
   width: 100%;
-  padding: 14px 16px;
-  border: 1.5px solid rgba($ink, 0.15);
-  border-radius: 6px;
-  background: rgba(white, 0.4);
+  padding: 14px 18px;
+  border: 1px solid $border-subtle;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
   font-family: $font-primary;
   font-size: 15px;
-  color: $ink;
-  transition: border-color $duration-fast;
+  color: $text-primary;
+  transition: border-color $duration-fast, background $duration-fast;
 
-  &::placeholder { color: rgba($ink, 0.4); }
+  &::placeholder { color: $text-muted; }
   &:focus {
     outline: none;
-    border-color: $ink;
-    background: rgba(white, 0.6);
+    border-color: $vermilion;
+    background: rgba(255, 255, 255, 0.05);
   }
 }
 
@@ -158,29 +169,32 @@
 
 .submitBtn {
   padding: 14px 32px;
-  background: $ink;
-  color: $warm-paper;
+  background: $vermilion;
+  color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   font-family: $font-primary;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
   cursor: pointer;
-  transition: transform $duration-fast $ease-out;
+  transition: transform $duration-fast $ease-out, box-shadow $duration-fast;
   align-self: flex-start;
 
-  &:hover { transform: translateY(-2px); }
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba($vermilion, 0.35);
+  }
 }
 
 .footer {
-  margin-top: 80px;
+  margin-top: 100px;
   padding-top: 32px;
-  border-top: 1px solid rgba($ink, 0.1);
+  border-top: 1px solid $border-subtle;
 
   p {
     font-family: $font-mono;
     font-size: 13px;
-    color: rgba($ink, 0.4);
+    color: $text-muted;
     text-align: center;
   }
 }

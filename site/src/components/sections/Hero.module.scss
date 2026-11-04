@@ -6,157 +6,175 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: $vermilion;
+  background: $bg-primary;
   overflow: hidden;
+  @include noise-bg;
 }
 
-.bg {
+.gradientOrb {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.06;
+  width: 800px;
+  height: 800px;
+  right: -200px;
+  top: -200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba($vermilion, 0.12) 0%, transparent 70%);
+  filter: blur(80px);
   pointer-events: none;
-  font-family: $font-primary;
-  font-weight: 700;
-  font-size: clamp(120px, 20vw, 300px);
-  color: $ink;
-  letter-spacing: -0.05em;
-  white-space: nowrap;
-  user-select: none;
+  z-index: 0;
 }
 
 .inner {
   @include container-wide;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-  padding-top: 100px;
-  padding-bottom: 60px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  padding-top: 160px;
+  padding-bottom: 100px;
 
   @include respond-to(tablet) {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 60px;
   }
 }
 
 .content {
-  color: $ink;
+  max-width: 720px;
 }
 
-.chapter {
-  @include label-text;
-  color: rgba($ink, 0.5);
-  margin-bottom: 16px;
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: $font-mono;
+  font-size: 13px;
+  color: $text-secondary;
+  letter-spacing: 0.03em;
+  margin-bottom: 32px;
+  padding: 6px 16px 6px 12px;
+  border: 1px solid $border-subtle;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22C55E;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
 
 .name {
-  @include heading-xl;
-  margin-bottom: 16px;
-  color: $ink;
+  font-family: $font-primary;
+  font-weight: 800;
+  font-size: clamp(56px, 9vw, 120px);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  color: $text-primary;
+  margin-bottom: 24px;
+}
+
+.lastName {
+  color: $text-primary;
+  -webkit-text-stroke: 1.5px $text-primary;
+  -webkit-text-fill-color: transparent;
+
+  @include respond-to(tablet) {
+    -webkit-text-stroke: 1px $text-primary;
+  }
 }
 
 .role {
-  font-family: $font-primary;
-  font-size: clamp(18px, 2vw, 24px);
-  font-weight: 500;
-  color: rgba($ink, 0.7);
-  margin-bottom: 12px;
+  font-family: $font-mono;
+  font-size: clamp(14px, 1.5vw, 18px);
+  font-weight: 400;
+  color: $vermilion;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 .tagline {
   @include heading-md;
-  font-weight: 500;
+  font-weight: 600;
+  color: $text-primary;
   margin-bottom: 24px;
 
   .exp {
     @include expressive;
-    color: $deep-oxblood;
+    color: $vermilion;
   }
 }
 
 .intro {
   @include body-text;
-  color: rgba($ink, 0.8);
-  max-width: 520px;
-  margin-bottom: 40px;
+  color: $text-secondary;
+  max-width: 540px;
+  margin-bottom: 48px;
 
-  @include respond-to(tablet) { margin: 0 auto 40px; }
+  @include respond-to(tablet) { margin-bottom: 36px; }
 }
 
 .actions {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-
-  @include respond-to(tablet) { justify-content: center; }
 }
 
-.btn {
+.btnPrimary {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 14px 32px;
-  border-radius: 4px;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 6px;
   font-family: $font-primary;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.01em;
+  background: $vermilion;
+  color: white;
   transition: transform $duration-fast $ease-out, box-shadow $duration-fast $ease-out;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 32px rgba($vermilion, 0.35);
   }
 
   &:active { transform: translateY(0); }
 }
 
-.btnPrimary {
-  background: $ink;
-  color: $warm-paper;
+.arrow {
+  transition: transform $duration-fast $ease-out;
+  .btnPrimary:hover & { transform: translateX(4px); }
 }
 
-.btnSecondary {
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 32px;
+  border-radius: 6px;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 15px;
+  color: $text-secondary;
+  border: 1px solid $border-subtle;
   background: transparent;
-  color: $ink;
-  border: 1.5px solid rgba($ink, 0.3);
+  transition: color $duration-fast, border-color $duration-fast, background $duration-fast;
 
-  &:hover { border-color: $ink; }
-}
-
-.portrait {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-
-  @include respond-to(tablet) { order: -1; }
-}
-
-.imageFrame {
-  position: relative;
-  width: 100%;
-  max-width: 420px;
-  aspect-ratio: 3 / 4;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba($deep-oxblood, 0.3);
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
+  &:hover {
+    color: $text-primary;
+    border-color: $border-hover;
+    background: rgba(255, 255, 255, 0.04);
   }
 }
 
-.scrollCue {
+.scrollLine {
   position: absolute;
   bottom: 40px;
   left: 50%;
@@ -164,34 +182,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  color: rgba($ink, 0.4);
-  font-size: 12px;
+  gap: 10px;
+  color: $text-muted;
+  font-size: 11px;
   font-family: $font-mono;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  z-index: 2;
 
   @include respond-to(tablet) { display: none; }
+}
 
-  .arrow {
-    width: 1px;
-    height: 40px;
-    background: rgba($ink, 0.2);
-    position: relative;
+.line {
+  width: 1px;
+  height: 48px;
+  background: $border-subtle;
+  position: relative;
+  overflow: hidden;
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 50%;
-      background: rgba($ink, 0.6);
-      animation: scrollPulse 2s ease-in-out infinite;
-    }
+  &::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: $vermilion;
+    animation: scrollPulse 2s ease-in-out infinite;
   }
 }
 
 @keyframes scrollPulse {
-  0%, 100% { transform: translateY(0); opacity: 1; }
-  50% { transform: translateY(20px); opacity: 0.3; }
+  0% { top: -40%; }
+  100% { top: 110%; }
 }

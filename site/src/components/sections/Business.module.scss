@@ -2,21 +2,28 @@
 @use '../../styles/mixins' as *;
 
 .business {
-  background: $warm-paper;
+  position: relative;
+  background: $bg-primary;
   padding: $section-pad 0;
+  @include noise-bg;
   @include respond-to(tablet) { padding: $section-pad-mobile 0; }
 }
 
-.inner { @include container; }
+.inner {
+  @include container;
+  position: relative;
+  z-index: 1;
+}
 
 .chapter {
   @include label-text;
-  color: $muted-stone;
+  color: $vermilion;
   margin-bottom: 16px;
 }
 
 .title {
   @include heading-lg;
+  color: $text-primary;
   margin-bottom: 8px;
 
   .exp { @include expressive; color: $vermilion; }
@@ -25,7 +32,7 @@
 .subtitle {
   font-family: $font-mono;
   font-size: 14px;
-  color: $muted-stone;
+  color: $text-muted;
   margin-bottom: 16px;
 }
 
@@ -39,22 +46,16 @@
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 16px;
   margin-bottom: 80px;
 }
 
 .serviceCard {
+  @include glass-card;
   padding: 32px;
-  border: 1px solid rgba($muted-stone, 0.25);
-  border-radius: 8px;
-  background: white;
-  transition: border-color $duration-fast $ease-out, transform $duration-fast $ease-out, box-shadow $duration-fast;
+  @include glow-on-hover;
 
-  &:hover {
-    border-color: $vermilion;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba($ink, 0.06);
-  }
+  &:hover { transform: translateY(-3px); }
 }
 
 .serviceIcon {
@@ -66,8 +67,8 @@
 .serviceTitle {
   font-weight: 600;
   font-size: 18px;
-  color: $ink;
-  margin-bottom: 8px;
+  color: $text-primary;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -76,21 +77,21 @@
 .statusBadge {
   @include label-text;
   font-size: 10px;
-  padding: 2px 8px;
-  border-radius: 12px;
-  background: rgba($vermilion, 0.1);
+  padding: 2px 10px;
+  border-radius: 20px;
+  background: rgba($vermilion, 0.15);
   color: $vermilion;
 
   &.developing {
-    background: rgba($muted-stone, 0.15);
-    color: $muted-stone;
+    background: rgba(255, 255, 255, 0.06);
+    color: $text-muted;
   }
 }
 
 .serviceDesc {
   font-size: 15px;
   color: $text-secondary;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .subsection {
@@ -102,7 +103,8 @@
   font-size: 28px;
   margin-bottom: 32px;
   padding-bottom: 16px;
-  border-bottom: 2px solid rgba($muted-stone, 0.15);
+  border-bottom: 1px solid $border-subtle;
+  color: $text-primary;
 }
 
 .collabCard {
@@ -110,9 +112,7 @@
   grid-template-columns: auto 1fr;
   gap: 24px;
   padding: 32px;
-  border: 1px solid rgba($muted-stone, 0.25);
-  border-radius: 8px;
-  background: white;
+  @include glass-card;
 
   @include respond-to(tablet) {
     grid-template-columns: 1fr;
@@ -137,41 +137,48 @@
   h4 {
     font-size: 20px;
     font-weight: 600;
-    color: $ink;
+    color: $text-primary;
     margin-bottom: 8px;
   }
   p {
     font-size: 15px;
     color: $text-secondary;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 }
 
 .ventureCard {
-  @extend .collabCard;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  padding: 32px;
+  @include glass-card;
+
+  @include respond-to(tablet) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 .processGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 16px;
 
   @include respond-to(tablet) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
   }
 }
 
 .processStep {
   text-align: center;
-  padding: 28px 20px;
-  border: 1px solid rgba($muted-stone, 0.2);
-  border-radius: 8px;
+  padding: 32px 20px;
+  @include glass-card;
 
   .stepNum {
     font-family: $font-mono;
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 36px;
+    font-weight: 700;
     color: $vermilion;
     margin-bottom: 12px;
     display: block;
@@ -180,41 +187,41 @@
   h4 {
     font-size: 16px;
     font-weight: 600;
-    color: $ink;
-    margin-bottom: 4px;
+    color: $text-primary;
+    margin-bottom: 6px;
   }
 
   p {
     font-size: 13px;
-    color: $text-secondary;
+    color: $text-muted;
   }
 }
 
 .cta {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 80px;
 
   p {
     @include body-text;
     color: $text-secondary;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
 }
 
 .ctaBtn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 16px 36px;
+  gap: 10px;
+  padding: 16px 40px;
   background: $vermilion;
   color: white;
-  border-radius: 4px;
-  font-weight: 500;
+  border-radius: 6px;
+  font-weight: 600;
   font-size: 16px;
   transition: transform $duration-fast $ease-out, box-shadow $duration-fast;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba($vermilion, 0.3);
+    box-shadow: 0 8px 32px rgba($vermilion, 0.35);
   }
 }

@@ -2,23 +2,28 @@
 @use '../../styles/mixins' as *;
 
 .story {
-  background: $warm-paper;
+  position: relative;
+  background: $bg-primary;
   padding: $section-pad 0;
+  @include noise-bg;
   @include respond-to(tablet) { padding: $section-pad-mobile 0; }
 }
 
 .inner {
   @include container;
+  position: relative;
+  z-index: 1;
 }
 
 .chapter {
   @include label-text;
-  color: $muted-stone;
+  color: $vermilion;
   margin-bottom: 16px;
 }
 
 .title {
   @include heading-lg;
+  color: $text-primary;
   margin-bottom: 8px;
 
   .exp {
@@ -30,7 +35,7 @@
 .subtitle {
   font-family: $font-mono;
   font-size: 14px;
-  color: $muted-stone;
+  color: $text-muted;
   margin-bottom: 48px;
 }
 
@@ -59,12 +64,12 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 0;
 }
 
 .highlight {
   padding: 20px 0;
-  border-bottom: 1px solid rgba($muted-stone, 0.3);
+  border-bottom: 1px solid $border-subtle;
 
   &:first-child { padding-top: 0; }
   &:last-child { border-bottom: none; }
@@ -73,7 +78,7 @@
 .hlLabel {
   @include label-text;
   font-size: 11px;
-  color: $muted-stone;
+  color: $text-muted;
   margin-bottom: 6px;
 }
 
@@ -81,32 +86,35 @@
   font-family: $font-primary;
   font-weight: 500;
   font-size: 16px;
-  color: $ink;
+  color: $text-primary;
 }
 
 .experience {
-  margin-top: 80px;
+  margin-top: 100px;
   @include respond-to(tablet) { margin-top: 60px; }
 }
 
 .expTitle {
   @include heading-md;
-  margin-bottom: 40px;
+  color: $text-primary;
+  margin-bottom: 48px;
 }
 
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 0;
 }
 
 .timelineItem {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 220px 1fr;
   gap: 40px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgba($muted-stone, 0.2);
+  padding: 40px 0;
+  border-bottom: 1px solid $border-subtle;
+  transition: background $duration-normal;
 
+  &:first-child { padding-top: 0; }
   &:last-child { border-bottom: none; }
 
   @include respond-to(tablet) {
@@ -119,12 +127,12 @@
   .period {
     font-family: $font-mono;
     font-size: 13px;
-    color: $muted-stone;
+    color: $text-muted;
   }
   .org {
     font-weight: 500;
     font-size: 14px;
-    color: $ink;
+    color: $text-secondary;
     margin-top: 4px;
   }
 }
@@ -132,36 +140,38 @@
 .timeContent {
   .role {
     font-weight: 600;
-    font-size: 18px;
-    color: $ink;
+    font-size: 20px;
+    color: $text-primary;
     margin-bottom: 8px;
   }
   .focus {
     font-size: 14px;
-    color: $muted-stone;
-    margin-bottom: 16px;
+    color: $text-muted;
+    font-family: $font-mono;
+    margin-bottom: 20px;
   }
 
   ul {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
   }
 
   li {
     font-size: 15px;
     color: $text-secondary;
-    padding-left: 16px;
+    padding-left: 20px;
     position: relative;
+    line-height: 1.6;
 
     &::before {
       content: '';
       position: absolute;
       left: 0;
-      top: 8px;
-      width: 4px;
-      height: 4px;
+      top: 10px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: $vermilion;
     }
@@ -169,25 +179,24 @@
 }
 
 .leadershipGrid {
-  margin-top: 60px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 16px;
 }
 
 .leaderCard {
-  padding: 24px;
-  border: 1px solid rgba($muted-stone, 0.2);
-  border-radius: 6px;
-  transition: border-color $duration-fast $ease-out;
+  @include glass-card;
+  padding: 28px;
 
-  &:hover { border-color: $vermilion; }
+  &:hover {
+    border-color: rgba($vermilion, 0.2);
+  }
 
   h4 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
-    color: $ink;
-    margin-bottom: 4px;
+    color: $text-primary;
+    margin-bottom: 6px;
   }
 
   p {

@@ -1,11 +1,12 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import gsap from 'gsap';
 import { hero } from '@/data/content';
-import { asset } from '@/lib/basePath';
 import styles from './Hero.module.scss';
+
+const HeroScene = dynamic(() => import('@/components/three/HeroScene'), { ssr: false });
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -21,37 +22,39 @@ export default function Hero() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const items = el.querySelectorAll('[data-hero]');
-    gsap.set(items, { opacity: 0, y: 30 });
+    gsap.set(items, { opacity: 0, y: 40 });
     gsap.to(items, {
       opacity: 1,
       y: 0,
-      duration: 0.8,
-      stagger: 0.1,
+      duration: 1,
+      stagger: 0.12,
       ease: 'power3.out',
-      delay: 0.2,
+      delay: 0.3,
     });
 
-    const portrait = el.querySelector('[data-portrait]');
-    if (portrait) {
-      gsap.set(portrait, { opacity: 0, scale: 0.92 });
-      gsap.to(portrait, {
-        opacity: 1,
-        scale: 1,
-        duration: 1,
-        ease: 'power2.out',
-        delay: 0.5,
-      });
+    const glow = el.querySelector('[data-glow]');
+    if (glow) {
+      gsap.set(glow, { opacity: 0, scale: 0.8 });
+      gsap.to(glow, { opacity: 1, scale: 1, duration: 2, ease: 'power2.out', delay: 0.5 });
     }
   }, []);
 
   return (
     <section id="home" className={styles.hero} ref={sectionRef}>
-      <div className={styles.bg} aria-hidden="true">ARUN</div>
+      <div className={styles.gradientOrb} data-glow aria-hidden="true" />
+      <HeroScene />
 
       <div className={styles.inner}>
         <div className={styles.content}>
-          <p className={styles.chapter} data-hero>01 — Introduction</p>
-          <h1 className={styles.name} data-hero>{hero.name}</h1>
+          <p className={styles.tag} data-hero>
+            <span className={styles.dot} />
+            Available for opportunities
+          </p>
+          <h1 className={styles.name} data-hero>
+            {hero.name.split(' ')[0]}
+            <br />
+            <span className={styles.lastName}>{hero.name.split(' ')[1]}</span>
+          </h1>
           <p className={styles.role} data-hero>{hero.role}</p>
           <p className={styles.tagline} data-hero>
             Engineer. <span className={styles.exp}>Creator.</span> Entrepreneur.
@@ -60,38 +63,26 @@ export default function Hero() {
           <div className={styles.actions} data-hero>
             <a
               href={hero.cta1.href}
-              className={`${styles.btn} ${styles.btnPrimary}`}
+              className={styles.btnPrimary}
               onClick={(e) => { e.preventDefault(); handleScroll(hero.cta1.href); }}
             >
               {hero.cta1.label}
-              <span aria-hidden="true">&rarr;</span>
+              <span className={styles.arrow} aria-hidden="true">&rarr;</span>
             </a>
             <a
               href={hero.cta2.href}
-              className={`${styles.btn} ${styles.btnSecondary}`}
+              className={styles.btnGhost}
               onClick={(e) => { e.preventDefault(); handleScroll(hero.cta2.href); }}
             >
               {hero.cta2.label}
             </a>
           </div>
         </div>
-
-        <div className={styles.portrait} data-portrait>
-          <div className={styles.imageFrame}>
-            <Image
-              src={asset('/images/profile/arun-sanyasi-profile.jpg')}
-              alt="Arun Sanyasi — Instrumentation and Control Engineer"
-              width={420}
-              height={560}
-              priority
-            />
-          </div>
-        </div>
       </div>
 
-      <div className={styles.scrollCue}>
+      <div className={styles.scrollLine} data-hero>
         <span>Scroll</span>
-        <div className={styles.arrow} />
+        <div className={styles.line} />
       </div>
     </section>
   );

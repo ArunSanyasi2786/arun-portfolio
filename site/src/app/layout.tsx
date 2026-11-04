@@ -34,8 +34,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://rsms.me" />
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+        <meta name="theme-color" content="#060606" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body>
         <script
