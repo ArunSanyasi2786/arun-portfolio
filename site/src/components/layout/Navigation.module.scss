@@ -1,0 +1,131 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 20px 0;
+  transition: background $duration-normal $ease-out, padding $duration-normal $ease-out;
+
+  &.scrolled {
+    background: rgba($warm-paper, 0.9);
+    backdrop-filter: blur(12px);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba($muted-stone, 0.2);
+  }
+
+  &.onDark {
+    &.scrolled {
+      background: rgba($ink, 0.9);
+    }
+  }
+}
+
+.inner {
+  @include container-wide;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: $ink;
+
+  .scrolled & { color: $ink; }
+
+  span {
+    color: $vermilion;
+  }
+}
+
+.links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+}
+
+.link {
+  @include label-text;
+  font-size: 12px;
+  color: $text-secondary;
+  transition: color $duration-fast $ease-out;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: $vermilion;
+    transition: width $duration-normal $ease-out;
+  }
+
+  &:hover, &.active {
+    color: $ink;
+    &::after { width: 100%; }
+  }
+}
+
+.menuBtn {
+  display: none;
+  width: 32px;
+  height: 32px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+
+  @include respond-to(tablet) { display: flex; }
+
+  span {
+    display: block;
+    width: 20px;
+    height: 1.5px;
+    background: $ink;
+    transition: transform $duration-normal $ease-out, opacity $duration-fast;
+  }
+
+  &.open {
+    span:first-child { transform: rotate(45deg) translate(2.5px, 2.5px); }
+    span:nth-child(2) { opacity: 0; }
+    span:last-child { transform: rotate(-45deg) translate(2.5px, -2.5px); }
+  }
+}
+
+.mobileMenu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: $warm-paper;
+  z-index: 99;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+
+  &.open {
+    @include respond-to(tablet) { display: flex; }
+  }
+}
+
+.mobileLink {
+  @include heading-md;
+  color: $ink;
+  transition: color $duration-fast;
+
+  &:hover { color: $vermilion; }
+}

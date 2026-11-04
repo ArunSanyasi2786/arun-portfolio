@@ -1,0 +1,33 @@
+# Arun Sanyasi — Portfolio
+
+## About
+Arun Sanyasi is an Instrumentation and Control Engineer from Bhutan (B.E., College of Science and Technology, Royal University of Bhutan, 2022–2026). He builds automation systems, creates content for Bhutanese creators, and pursues entrepreneurial ventures.
+
+## Expertise
+- Industrial Automation: PLC programming, SCADA, SICAM A8000, TIA Portal
+- Instrumentation: RTDs, thermocouples, flow/pressure transmitters
+- Software: Python, PyQt6, C/C++, ESP32, Raspberry Pi
+- Creative: Video editing, logo design, social media management
+- Design: AutoCAD Electrical, EPLAN, SolidWorks, Blender
+
+## Services
+- Video & Content Editing
+- Logos, Banners & Channel Assets
+- Social Media Management
+- Electrical House Wiring & BOQ
+- Civil AutoCAD Drawings
+- 3D Modelling & Visualization
+
+## Projects
+- Basic Health Monitoring Station (Python/PyQt6/ESP32/RPi)
+- PLC-Based Dam Water Level & Gate Control
+- HVAC Automation & Control
+- Vehicle Accident Detection System
+
+## Contact
+- Email: sanyasiarun220@gmail.com
+- Location: Bhutan
+- GitHub: https://github.com/ArunSanyasi2786
+- LinkedIn: https://www.linkedin.com/in/arun-sanyasi-469ba8272/
+- YouTube: https://www.youtube.com/@aaronZ-z8k
+- Instagram: https://www.instagram.com/man_on_a_protocol/

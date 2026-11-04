@@ -1,0 +1,215 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.work {
+  background: $ink;
+  color: $warm-paper;
+  padding: $section-pad 0;
+  @include respond-to(tablet) { padding: $section-pad-mobile 0; }
+}
+
+.inner { @include container; }
+
+.chapter {
+  @include label-text;
+  color: rgba($warm-paper, 0.4);
+  margin-bottom: 16px;
+}
+
+.title {
+  @include heading-lg;
+  color: $warm-paper;
+  margin-bottom: 8px;
+
+  .exp { @include expressive; color: $vermilion; }
+}
+
+.subtitle {
+  font-family: $font-mono;
+  font-size: 14px;
+  color: $muted-stone;
+  margin-bottom: 60px;
+}
+
+.featured {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.projectCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 40px;
+  border-radius: 8px;
+  background: rgba($warm-paper, 0.04);
+  border: 1px solid rgba($warm-paper, 0.08);
+  transition: border-color $duration-normal $ease-out;
+
+  &:hover { border-color: rgba($vermilion, 0.3); }
+
+  @include respond-to(tablet) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+}
+
+.projectImage {
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  position: relative;
+  background: rgba($warm-paper, 0.05);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.projectContent {
+  .category {
+    @include label-text;
+    font-size: 11px;
+    color: $vermilion;
+    margin-bottom: 12px;
+  }
+
+  h3 {
+    font-size: clamp(22px, 2.5vw, 32px);
+    font-weight: 600;
+    color: $warm-paper;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  p {
+    @include body-text;
+    font-size: 16px;
+    color: rgba($warm-paper, 0.7);
+    margin-bottom: 20px;
+  }
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tag {
+  font-family: $font-mono;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba($warm-paper, 0.08);
+  color: rgba($warm-paper, 0.6);
+}
+
+.projectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: $vermilion;
+  transition: gap $duration-fast $ease-out;
+
+  &:hover { gap: 12px; }
+}
+
+.otherProjects {
+  h3 {
+    @include heading-md;
+    font-size: 24px;
+    color: $warm-paper;
+    margin-bottom: 32px;
+  }
+}
+
+.smallGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.smallCard {
+  padding: 28px;
+  border: 1px solid rgba($warm-paper, 0.1);
+  border-radius: 6px;
+  transition: border-color $duration-fast $ease-out, transform $duration-fast $ease-out;
+
+  &:hover {
+    border-color: rgba($vermilion, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .category {
+    @include label-text;
+    font-size: 11px;
+    color: $vermilion;
+    margin-bottom: 8px;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: $warm-paper;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 14px;
+    color: rgba($warm-paper, 0.6);
+    line-height: 1.5;
+  }
+}
+
+.skills {
+  margin-top: 80px;
+}
+
+.skillsTitle {
+  @include heading-md;
+  font-size: 24px;
+  color: $warm-paper;
+  margin-bottom: 32px;
+}
+
+.skillGroups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 32px;
+}
+
+.skillGroup {
+  h4 {
+    @include label-text;
+    font-size: 11px;
+    color: $vermilion;
+    margin-bottom: 16px;
+  }
+
+  .skillList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skill {
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    background: rgba($warm-paper, 0.06);
+    color: rgba($warm-paper, 0.7);
+    transition: background $duration-fast;
+
+    &:hover { background: rgba($warm-paper, 0.12); }
+  }
+}

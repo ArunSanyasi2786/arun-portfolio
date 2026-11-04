@@ -1,0 +1,43 @@
+// "Life in Chapters" — Color System
+$vermilion: #F04432;
+$ink: #171715;
+$warm-paper: #F2EEE6;
+$muted-stone: #B8B0A3;
+$deep-oxblood: #64251F;
+
+// Functional
+$text-primary: $ink;
+$text-secondary: rgba($ink, 0.7);
+$text-on-dark: $warm-paper;
+$text-on-red: $ink;
+$bg-light: $warm-paper;
+$bg-dark: $ink;
+$bg-accent: $vermilion;
+
+// Typography
+$font-primary: 'Switzer', system-ui, -apple-system, sans-serif;
+$font-expressive: 'Gambetta', Georgia, serif;
+$font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+// Spacing
+$gutter: 24px;
+$gutter-mobile: 20px;
+$section-pad: 120px;
+$section-pad-mobile: 80px;
+
+// Breakpoints
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-wide: 1440px;
+
+// Transitions
+$ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+$ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+$duration-fast: 200ms;
+$duration-normal: 400ms;
+$duration-slow: 800ms;
+
+// Grid
+$max-width: 1200px;
+$max-width-wide: 1400px;

@@ -1,0 +1,220 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.business {
+  background: $warm-paper;
+  padding: $section-pad 0;
+  @include respond-to(tablet) { padding: $section-pad-mobile 0; }
+}
+
+.inner { @include container; }
+
+.chapter {
+  @include label-text;
+  color: $muted-stone;
+  margin-bottom: 16px;
+}
+
+.title {
+  @include heading-lg;
+  margin-bottom: 8px;
+
+  .exp { @include expressive; color: $vermilion; }
+}
+
+.subtitle {
+  font-family: $font-mono;
+  font-size: 14px;
+  color: $muted-stone;
+  margin-bottom: 16px;
+}
+
+.intro {
+  @include body-text;
+  color: $text-secondary;
+  max-width: 680px;
+  margin-bottom: 60px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+.serviceCard {
+  padding: 32px;
+  border: 1px solid rgba($muted-stone, 0.25);
+  border-radius: 8px;
+  background: white;
+  transition: border-color $duration-fast $ease-out, transform $duration-fast $ease-out, box-shadow $duration-fast;
+
+  &:hover {
+    border-color: $vermilion;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba($ink, 0.06);
+  }
+}
+
+.serviceIcon {
+  font-size: 28px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.serviceTitle {
+  font-weight: 600;
+  font-size: 18px;
+  color: $ink;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.statusBadge {
+  @include label-text;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: rgba($vermilion, 0.1);
+  color: $vermilion;
+
+  &.developing {
+    background: rgba($muted-stone, 0.15);
+    color: $muted-stone;
+  }
+}
+
+.serviceDesc {
+  font-size: 15px;
+  color: $text-secondary;
+  line-height: 1.6;
+}
+
+.subsection {
+  margin-bottom: 60px;
+}
+
+.subsectionTitle {
+  @include heading-md;
+  font-size: 28px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid rgba($muted-stone, 0.15);
+}
+
+.collabCard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  padding: 32px;
+  border: 1px solid rgba($muted-stone, 0.25);
+  border-radius: 8px;
+  background: white;
+
+  @include respond-to(tablet) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.collabIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, $vermilion, $deep-oxblood);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+}
+
+.collabContent {
+  h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: $ink;
+    margin-bottom: 8px;
+  }
+  p {
+    font-size: 15px;
+    color: $text-secondary;
+    line-height: 1.6;
+  }
+}
+
+.ventureCard {
+  @extend .collabCard;
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+.processStep {
+  text-align: center;
+  padding: 28px 20px;
+  border: 1px solid rgba($muted-stone, 0.2);
+  border-radius: 8px;
+
+  .stepNum {
+    font-family: $font-mono;
+    font-size: 32px;
+    font-weight: 600;
+    color: $vermilion;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: $ink;
+    margin-bottom: 4px;
+  }
+
+  p {
+    font-size: 13px;
+    color: $text-secondary;
+  }
+}
+
+.cta {
+  text-align: center;
+  margin-top: 60px;
+
+  p {
+    @include body-text;
+    color: $text-secondary;
+    margin-bottom: 24px;
+  }
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 36px;
+  background: $vermilion;
+  color: white;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: transform $duration-fast $ease-out, box-shadow $duration-fast;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba($vermilion, 0.3);
+  }
+}
