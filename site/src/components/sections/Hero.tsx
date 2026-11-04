@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { hero } from '@/data/content';
+import { asset } from '@/lib/basePath';
 import styles from './Hero.module.scss';
 
 export default function Hero() {
@@ -78,7 +79,7 @@ export default function Hero() {
         <div className={styles.portrait} data-portrait>
           <div className={styles.imageFrame}>
             <Image
-              src="/images/profile/arun-sanyasi-profile.jpg"
+              src={asset('/images/profile/arun-sanyasi-profile.jpg')}
               alt="Arun Sanyasi — Instrumentation and Control Engineer"
               width={420}
               height={560}

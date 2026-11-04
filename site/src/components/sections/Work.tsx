@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { projects, skills } from '@/data/content';
+import { asset } from '@/lib/basePath';
 import RevealSection from '@/components/animations/RevealSection';
 import styles from './Work.module.scss';
 
@@ -25,7 +26,7 @@ export default function Work() {
             <RevealSection key={project.title} className={styles.projectCard}>
               <div className={styles.projectImage} data-reveal>
                 {project.image && (
-                  <Image src={project.image} alt={project.title} width={600} height={375} />
+                  <Image src={asset(project.image)} alt={project.title} width={600} height={375} />
                 )}
               </div>
               <div className={styles.projectContent} data-reveal>
