@@ -5,6 +5,7 @@ import { hero } from '@/data/content';
 import styles from './Hero.module.scss';
 
 const HeroScene = dynamic(() => import('@/components/three/HeroScene'), { ssr: false });
+const ProfileImage = dynamic(() => import('@/components/three/ProfileImage'), { ssr: false });
 
 export default function Hero() {
   const handleScroll = (href: string) => {
@@ -50,6 +51,10 @@ export default function Hero() {
               {hero.cta2.label}
             </a>
           </div>
+        </div>
+
+        <div className={`${styles.profileCol} ${styles.fadeUp}`} style={{ animationDelay: '0.5s' }}>
+          <ProfileImage />
         </div>
       </div>
 

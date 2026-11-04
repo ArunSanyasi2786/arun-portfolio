@@ -1,0 +1,83 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.wrapper {
+  position: relative;
+  flex-shrink: 0;
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+}
+
+.frame {
+  position: relative;
+  width: 280px;
+  height: 340px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  &:hover {
+    .matrix { opacity: 0.75; }
+    .photo { filter: grayscale(0.3) brightness(0.7); transform: scale(1.03); }
+    .scanline { opacity: 1; }
+  }
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.15) brightness(0.85);
+  transition: filter 0.6s $ease-out, transform 0.6s $ease-out;
+}
+
+.matrix {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  transition: opacity 0.6s $ease-out;
+}
+
+.scanline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity 0.6s;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.15) 2px,
+    rgba(0, 0, 0, 0.15) 4px
+  );
+}
+
+.border {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+  transition: border-color 0.4s;
+
+  .frame:hover & {
+    border-color: rgba($vermilion, 0.4);
+  }
+}
+
+.glow {
+  position: absolute;
+  inset: -40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba($vermilion, 0.08) 0%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: -1;
+}

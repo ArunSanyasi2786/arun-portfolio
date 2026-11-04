@@ -3,6 +3,7 @@ import Story from '@/components/sections/Story';
 import Work from '@/components/sections/Work';
 import Business from '@/components/sections/Business';
 import Contact from '@/components/sections/Contact';
+import ChatBot from '@/components/chat/ChatBot';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Work />
       <Business />
       <Contact />
+      <ChatBot />
     </>
   );
 }
