@@ -13,7 +13,7 @@ export default function HeroScene() {
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(50, container.clientWidth / container.clientHeight, 0.1, 100);
-    camera.position.z = 4;
+    camera.position.set(1.5, 0.3, 4);
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -28,7 +28,7 @@ export default function HeroScene() {
     const lineMat = new THREE.LineBasicMaterial({
       color: 0xF04432,
       transparent: true,
-      opacity: 0.25,
+      opacity: 0.18,
     });
     const mesh = new THREE.LineSegments(wireframe, lineMat);
     group.add(mesh);

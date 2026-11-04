@@ -22,20 +22,18 @@ export default function Hero() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const items = el.querySelectorAll('[data-hero]');
-    gsap.set(items, { opacity: 0, y: 40 });
-    gsap.to(items, {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      stagger: 0.12,
-      ease: 'power3.out',
-      delay: 0.3,
-    });
-
     const glow = el.querySelector('[data-glow]');
+
+    gsap.fromTo(items,
+      { opacity: 0, y: 40 },
+      { opacity: 1, y: 0, duration: 1, stagger: 0.12, ease: 'power3.out', delay: 0.15 }
+    );
+
     if (glow) {
-      gsap.set(glow, { opacity: 0, scale: 0.8 });
-      gsap.to(glow, { opacity: 1, scale: 1, duration: 2, ease: 'power2.out', delay: 0.5 });
+      gsap.fromTo(glow,
+        { opacity: 0, scale: 0.8 },
+        { opacity: 1, scale: 1, duration: 2, ease: 'power2.out', delay: 0.3 }
+      );
     }
   }, []);
 
