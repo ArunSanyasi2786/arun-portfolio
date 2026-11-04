@@ -1,21 +1,46 @@
 'use client';
 
-import { ReactNode } from 'react';
-import { useScrollReveal } from '@/hooks/useGsap';
+import { ReactNode, useEffect, useRef, useState } from 'react';
+import styles from './RevealSection.module.scss';
 
 interface Props {
   children: ReactNode;
   className?: string;
-  as?: keyof React.JSX.IntrinsicElements;
 }
 
-export default function RevealSection({ children, className, as: Tag = 'div' }: Props) {
-  const ref = useScrollReveal<HTMLElement>();
+export default function RevealSection({ children, className }: Props) {
+  const ref = useRef<HTMLElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      setVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const cls = `${styles.reveal} ${visible ? styles.visible : ''} ${className || ''}`;
 
   return (
-    // @ts-expect-error dynamic tag
-    <Tag ref={ref} className={className}>
+    <div ref={ref as React.RefObject<HTMLDivElement>} className={cls}>
       {children}
-    </Tag>
+    </div>
   );
 }
