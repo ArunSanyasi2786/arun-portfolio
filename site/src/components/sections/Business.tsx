@@ -1,6 +1,7 @@
 'use client';
 
 import { business } from '@/data/content';
+import iconMap from '@/components/icons/ServiceIcons';
 import RevealSection from '@/components/animations/RevealSection';
 import styles from './Business.module.scss';
 
@@ -20,9 +21,13 @@ export default function Business() {
         <RevealSection className={styles.subsection}>
           <h3 className={styles.subsectionTitle} data-reveal>Services & Capabilities</h3>
           <div className={styles.servicesGrid}>
-            {business.services.map((service) => (
+            {business.services.map((service) => {
+              const Icon = iconMap[service.icon];
+              return (
               <div key={service.title} className={styles.serviceCard} data-reveal>
-                <span className={styles.serviceIcon} aria-hidden="true">{service.icon}</span>
+                <span className={styles.serviceIcon} aria-hidden="true">
+                  {Icon ? <Icon size={28} /> : null}
+                </span>
                 <h4 className={styles.serviceTitle}>
                   {service.title}
                   <span className={`${styles.statusBadge} ${service.status === 'developing' ? styles.developing : ''}`}>
@@ -31,7 +36,8 @@ export default function Business() {
                 </h4>
                 <p className={styles.serviceDesc}>{service.description}</p>
               </div>
-            ))}
+              );
+            })}
           </div>
         </RevealSection>
 

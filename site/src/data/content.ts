@@ -33,7 +33,7 @@ export const about = {
   highlights: [
     { label: 'Education', value: 'B.E. in ICE, CST Royal University of Bhutan' },
     { label: 'Graduated', value: 'June 2026' },
-    { label: 'Languages', value: 'English, Dzongkha, Hindi, Basic Spanish' },
+    { label: 'Languages', value: 'English, Dzongkha, Hindi, Lhotshamkha, Tshanglakha' },
     { label: 'Based in', value: 'Bhutan' },
   ],
 };
@@ -122,13 +122,37 @@ export const projects = [
 ];
 
 export const skills = {
-  automation: ['PLC Programming', 'Ladder Logic', 'Structured Text', 'SICAM A8000', 'S7-1200', 'SCALA 250', 'TIA Portal', 'WinCC', 'DCS', 'HMI Design', 'CODESYS', 'Factory I/O'],
+  automation: ['PLC Programming', 'Ladder Logic', 'Structured Text', 'SICAM A8000', 'S7-1200', 'SCALA 250', 'TIA Portal', 'WinCC', 'DCS', 'HMI Design', 'CODESYS', 'Factory I/O', 'FluidSIM'],
   instrumentation: ['RTDs', 'Thermocouples', 'Flow Monitors', 'Pressure Transmitters', 'Loop Checks', 'I/O Verification', 'Biomedical Sensors', 'Signal Tracing'],
-  electrical: ['HT/LT Panels', 'MCCs', 'ACB/MCCB', 'Motor Control', 'VFDs', 'Protection Systems', 'Switchgear'],
+  electrical: ['HT/LT Panels', 'MCCs', 'ACB/MCCB', 'Motor Control', 'VFDs', 'Protection Systems', 'Switchgear', 'Capacitor Banks', '33kV/11kV'],
   software: ['Python', 'PyQt6', 'C/C++', 'Arduino IDE', 'SQLite', 'ESP32', 'Raspberry Pi'],
   design: ['AutoCAD Electrical', 'EPLAN Electric P8', 'SolidWorks', 'Fusion 360', 'Blender', 'Proteus'],
   creative: ['Adobe Premiere Pro', 'Adobe Photoshop', 'Adobe Illustrator', 'Video Editing', 'Logo Design'],
+  protocols: ['Modbus RTU/TCP', 'PROFINET', 'PROFIBUS', 'Industrial Networking'],
+  protection: ['Differential Protection', 'Overcurrent', 'Earth Fault', 'SIPROTEC', 'ABB Relion', 'GE Multilin'],
 };
+
+export const certifications = [
+  { title: 'Management Leadership', org: 'Saylor University', detail: '37 hours, Grade: 92.31%' },
+  { title: 'Principles of Management', org: 'MindLuster', detail: 'Certificate of Achievement' },
+  { title: 'Project Management Short Course', org: 'Oxford Home Study Centre', detail: '' },
+  { title: 'PLC and HMI from Scratch', org: 'Coursera', detail: 'Specialization' },
+  { title: 'SCADA Software System Basics', org: 'Online Certification', detail: '' },
+  { title: 'Electric Motor Control Systems', org: 'Online Certification', detail: '' },
+  { title: 'AI for Robotics', org: 'Online Certification', detail: '' },
+  { title: 'AI Industry Analysis', org: 'Online Certification', detail: '' },
+  { title: 'Business Entrepreneurship', org: 'Online Certification', detail: '' },
+  { title: 'Selenium with Python', org: 'Online Certification', detail: '' },
+  { title: 'VFD Control Wiring Techniques', org: 'Online Certification', detail: '' },
+];
+
+export const languages = [
+  { name: 'English', level: 'Professional' },
+  { name: 'Dzongkha', level: 'Professional' },
+  { name: 'Hindi', level: 'Conversational' },
+  { name: 'Lhotshamkha', level: 'Native' },
+  { name: 'Tshanglakha', level: 'Conversational' },
+];
 
 export const business = {
   title: 'Business & Services',
@@ -137,49 +161,49 @@ export const business = {
   services: [
     {
       title: 'Video & Content Editing',
-      icon: '🎬',
+      icon: 'video',
       description: 'Professional editing for YouTube and social-media content. Color grading, transitions, effects, and delivery tailored to each creator\'s brand.',
       status: 'active',
     },
     {
       title: 'Logos, Banners & Channel Assets',
-      icon: '🎨',
+      icon: 'palette',
       description: 'Visual identity packages including logos, banners, YouTube intros and outros that help creators present a consistent channel identity.',
       status: 'active',
     },
     {
       title: 'Social Media Management',
-      icon: '📱',
+      icon: 'phone',
       description: 'End-to-end social media page management — content planning, scheduling, engagement, and analytics for Bhutanese creators and businesses.',
       status: 'active',
     },
     {
       title: 'Electrical House Wiring & BOQ',
-      icon: '⚡',
+      icon: 'bolt',
       description: 'Professional electrical house-wiring BOQ preparation for residential projects. Experienced with multi-storey buildings for consultancy firms.',
       status: 'active',
     },
     {
       title: 'Civil AutoCAD Drawings',
-      icon: '📐',
+      icon: 'blueprint',
       description: 'Housing drawings and civil drafting support using AutoCAD for residential and commercial projects.',
       status: 'developing',
     },
     {
       title: '3D Modelling & Visualization',
-      icon: '🧊',
+      icon: 'cube',
       description: 'Project-based 3D modelling using Blender and Fusion 360 to visualize designs, products, and architectural concepts.',
       status: 'developing',
     },
     {
       title: 'Content Writing',
-      icon: '✍️',
+      icon: 'pen',
       description: 'Written content for creators and businesses — scripts, descriptions, articles, and marketing copy with a Bhutanese perspective.',
       status: 'developing',
     },
     {
       title: 'Bhutan-Focused Content Ideas',
-      icon: '🏔️',
+      icon: 'mountain',
       description: 'Content planning and creative concepts shaped around Bhutanese audiences, communities, culture, and businesses.',
       status: 'developing',
     },

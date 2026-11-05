@@ -4,6 +4,7 @@
 .wrapper {
   position: relative;
   flex-shrink: 0;
+  cursor: pointer;
 
   @include respond-to(tablet) {
     display: none;
@@ -14,13 +15,22 @@
   position: relative;
   width: 280px;
   height: 340px;
-  border-radius: 12px;
+  border-radius: 4px;
   overflow: hidden;
+  transition: transform 0.5s $ease-out;
 
-  &:hover {
-    .matrix { opacity: 0.75; }
-    .photo { filter: grayscale(0.3) brightness(0.7); transform: scale(1.03); }
-    .scanline { opacity: 1; }
+  &.hovered {
+    transform: scale(1.02);
+
+    .photo {
+      filter: grayscale(0.6) brightness(0.4) contrast(1.2);
+      transform: scale(1.05);
+    }
+    .matrix { opacity: 0.85; }
+    .scanline { opacity: 0.8; }
+    .glitchLine { opacity: 1; animation: glitchSlide 0.15s steps(2) infinite; }
+    .border { border-color: rgba($vermilion, 0.6); box-shadow: 0 0 20px rgba($vermilion, 0.15); }
+    .cornerTL, .cornerBR { opacity: 1; }
   }
 }
 
@@ -29,8 +39,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(0.15) brightness(0.85);
-  transition: filter 0.6s $ease-out, transform 0.6s $ease-out;
+  filter: grayscale(0.1) brightness(0.85);
+  transition: filter 0.5s $ease-out, transform 0.5s $ease-out;
 }
 
 .matrix {
@@ -38,46 +48,118 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.35;
+  opacity: 0.15;
   mix-blend-mode: screen;
   pointer-events: none;
-  transition: opacity 0.6s $ease-out;
+  transition: opacity 0.5s $ease-out;
 }
 
 .scanline {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.5;
-  transition: opacity 0.6s;
+  opacity: 0.3;
+  transition: opacity 0.5s;
   background: repeating-linear-gradient(
     0deg,
     transparent,
     transparent 2px,
-    rgba(0, 0, 0, 0.15) 2px,
-    rgba(0, 0, 0, 0.15) 4px
+    rgba(0, 0, 0, 0.2) 2px,
+    rgba(0, 0, 0, 0.2) 4px
   );
+}
+
+.glitchLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  top: 50%;
+  background: rgba($vermilion, 0.6);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+@keyframes glitchSlide {
+  0% { top: 30%; height: 2px; }
+  50% { top: 65%; height: 4px; }
+  100% { top: 45%; height: 1px; }
 }
 
 .border {
   position: absolute;
   inset: 0;
-  border-radius: 12px;
+  border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   pointer-events: none;
-  transition: border-color 0.4s;
+  transition: border-color 0.4s, box-shadow 0.4s;
+}
 
-  .frame:hover & {
-    border-color: rgba($vermilion, 0.4);
-  }
+.cornerTL, .cornerBR {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.cornerTL {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid $vermilion;
+  border-left: 2px solid $vermilion;
+}
+
+.cornerBR {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid $vermilion;
+  border-right: 2px solid $vermilion;
 }
 
 .glow {
   position: absolute;
-  inset: -40px;
+  inset: -60px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba($vermilion, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba($vermilion, 0.06) 0%, transparent 70%);
   filter: blur(40px);
   pointer-events: none;
   z-index: -1;
+  transition: background 0.5s;
+
+  .wrapper:hover & {
+    background: radial-gradient(circle, rgba($vermilion, 0.12) 0%, transparent 70%);
+  }
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-family: $font-mono;
+  font-size: 10px;
+  color: $text-muted;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  .wrapper:hover & {
+    color: $vermilion;
+  }
+}
+
+.labelDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $text-muted;
+  transition: background 0.3s, box-shadow 0.3s;
+
+  .wrapper:hover & {
+    background: $vermilion;
+    box-shadow: 0 0 8px rgba($vermilion, 0.6);
+  }
 }

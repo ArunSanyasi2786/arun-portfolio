@@ -53,15 +53,50 @@
 .serviceCard {
   @include glass-card;
   padding: 32px;
-  @include glow-on-hover;
+  position: relative;
+  overflow: hidden;
 
-  &:hover { transform: translateY(-3px); }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba($vermilion, 0), transparent);
+    transition: background 0.5s;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 40px rgba($vermilion, 0.1), 0 12px 40px rgba(0, 0, 0, 0.5);
+    border-color: rgba($vermilion, 0.2);
+
+    &::before {
+      background: linear-gradient(90deg, transparent, rgba($vermilion, 0.6), transparent);
+    }
+
+    .serviceIcon {
+      color: $vermilion;
+      transform: scale(1.1);
+      border-color: rgba($vermilion, 0.3);
+      background: rgba($vermilion, 0.08);
+    }
+  }
 }
 
 .serviceIcon {
-  font-size: 28px;
-  margin-bottom: 16px;
-  display: block;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: $text-secondary;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: color 0.4s, transform 0.4s $ease-out, border-color 0.4s, background 0.4s;
 }
 
 .serviceTitle {

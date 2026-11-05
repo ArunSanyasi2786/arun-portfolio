@@ -51,8 +51,29 @@
   align-items: center;
   padding: 40px;
   border-radius: 16px;
+  position: relative;
+  overflow: hidden;
   @include glass-card;
-  @include glow-on-hover;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba($vermilion, 0), transparent);
+    transition: background 0.5s;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 60px rgba($vermilion, 0.08), 0 16px 48px rgba(0, 0, 0, 0.5);
+
+    &::after {
+      background: linear-gradient(90deg, transparent, rgba($vermilion, 0.5), transparent);
+    }
+  }
 
   @include respond-to(tablet) {
     grid-template-columns: 1fr;
@@ -176,6 +197,53 @@
     color: $text-secondary;
     line-height: 1.6;
   }
+}
+
+.certs {
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+.certGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 12px;
+}
+
+.certCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid $border-subtle;
+  transition: border-color 0.3s, background 0.3s, transform 0.3s $ease-out;
+
+  &:hover {
+    border-color: rgba($vermilion, 0.25);
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateX(4px);
+  }
+}
+
+.certIcon {
+  color: $vermilion;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.certTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: 2px;
+}
+
+.certOrg {
+  font-size: 12px;
+  color: $text-muted;
+  font-family: $font-mono;
 }
 
 .skills {

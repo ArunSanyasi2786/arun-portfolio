@@ -1,7 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { projects, skills } from '@/data/content';
+import { projects, skills, certifications } from '@/data/content';
+import { CertificateIcon } from '@/components/icons/ServiceIcons';
 import { asset } from '@/lib/basePath';
 import RevealSection from '@/components/animations/RevealSection';
 import styles from './Work.module.scss';
@@ -62,6 +63,21 @@ export default function Work() {
             </div>
           </RevealSection>
         )}
+
+        <RevealSection className={styles.certs}>
+          <h3 className={styles.skillsTitle} data-reveal>Certifications & Training</h3>
+          <div className={styles.certGrid}>
+            {certifications.map((cert) => (
+              <div key={cert.title} className={styles.certCard} data-reveal>
+                <span className={styles.certIcon}><CertificateIcon size={20} /></span>
+                <div>
+                  <h4 className={styles.certTitle}>{cert.title}</h4>
+                  <p className={styles.certOrg}>{cert.org}{cert.detail ? ` — ${cert.detail}` : ''}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </RevealSection>
 
         <RevealSection className={styles.skills}>
           <h3 className={styles.skillsTitle} data-reveal>Technical Skills</h3>
